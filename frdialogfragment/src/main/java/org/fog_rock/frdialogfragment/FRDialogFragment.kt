@@ -18,8 +18,6 @@ import org.fog_rock.frdialogfragment.extension.logW
 class FRDialogFragment : DialogFragment() {
 
     companion object {
-        private const val BUTTON_CANCEL = 0
-
         private const val ARGS_REQUEST_CODE = "request_code"
         private const val ARGS_TITLE = "title"
         private const val ARGS_MESSAGE = "message"
@@ -27,49 +25,6 @@ class FRDialogFragment : DialogFragment() {
         private const val ARGS_NEGATIVE_LABEL = "negative_label"
         private const val ARGS_NEUTRAL_LABEL = "neutral_label"
         private const val ARGS_IS_PARENT_ACTIVITY = "is_parent_activity"
-    }
-
-    /**
-     * ボタン選択結果
-     */
-    enum class Result(private val code: Int) {
-        /**
-         * キャンセル
-         */
-        CANCEL(BUTTON_CANCEL),
-
-        /**
-         * 肯定ボタン
-         */
-        POSITIVE(DialogInterface.BUTTON_POSITIVE),
-
-        /**
-         * 否定ボタン
-         */
-        NEGATIVE(DialogInterface.BUTTON_NEGATIVE),
-
-        /**
-         * 中間ボタン
-         */
-        NEUTRAL(DialogInterface.BUTTON_NEUTRAL),
-        ;
-
-        companion object {
-            fun convertFromCode(code: Int): Result = values().find { it.code == code } ?: CANCEL
-        }
-    }
-
-    /**
-     * コールバック
-     */
-    interface Callback {
-        /**
-         * ユーザーの選択結果.
-         * @param requestCode リクエストコード
-         * @param resultCode 結果コード
-         * @param data 詳細情報
-         */
-        fun onDialogResult(requestCode: Int, result: Result, data: Intent)
     }
 
     /**
@@ -167,7 +122,7 @@ class FRDialogFragment : DialogFragment() {
     private val neutralLabel: String? by lazy { args.getString(ARGS_NEUTRAL_LABEL) }
     private val isParentActivity: Boolean by lazy { args.getBoolean(ARGS_IS_PARENT_ACTIVITY, true) }
 
-    private val callback: Callback? by lazy {
+    private val callback: FRDialogFragmentCallback? by lazy {
         (if (isParentActivity) requireActivity().downCast() else parentFragment.downCast()) ?: run {
             logW("No implemented callback.")
             null
@@ -200,13 +155,13 @@ class FRDialogFragment : DialogFragment() {
 
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
-        callDialogResult(BUTTON_CANCEL)
+        callDialogResult(FRDialogFragmentResult.BUTTON_CANCEL)
     }
 
     private fun callDialogResult(code: Int) {
         callback?.onDialogResult(
             requestCode,
-            Result.convertFromCode(code),
+            FRDialogFragmentResult.convertFromCode(code),
             Intent().apply { putExtras(args) }
         )
     }

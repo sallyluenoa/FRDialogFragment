@@ -5,7 +5,7 @@ import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 
-data class FRDialogFragmentData(
+data class FRDialogFragmentRequest(
     val code: Int,
     @StringRes private val titleResId: Int?,
     @StringRes private val messageResId: Int?,
