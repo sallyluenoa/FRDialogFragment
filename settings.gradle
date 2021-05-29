@@ -1,0 +1,3 @@
+include ':frdialogfragment'
+include ':sample'
+rootProject.name = "FRDialogFragmentSample"
