@@ -4,16 +4,19 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    buildToolsVersion buildConfig.buildTools
+    compileSdkVersion buildConfig.compileSdk
 
     defaultConfig {
         applicationId "org.fog_rock.frdialogfragmentsample"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+        versionCode buildConfig.versionCode
+        versionName buildConfig.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        archivesBaseName = "$buildConfig.applicationName-v$versionName.$versionCode"
     }
 
     buildTypes {
@@ -23,23 +26,29 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 }
 
 dependencies {
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.5.0'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation project(path: ':frdialogfragment')
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // main
+    implementation project(':frdialogfragment')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+    implementation "androidx.appcompat:appcompat:$versions.androidx.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"
+    implementation "androidx.core:core-ktx:$versions.androidx.core"
+    implementation "com.google.android.material:material:$versions.google.androidMaterial"
+    // test
+    testImplementation "junit:junit:$versions.junit"
+    testImplementation "com.google.truth:truth:$versions.google.truth"
+    // androidTest
+    androidTestImplementation "androidx.test:core-ktx:$versions.androidx.testCore"
+    androidTestImplementation "androidx.test.ext:junit:$versions.androidx.testJunit"
+    androidTestImplementation "androidx.test.ext:truth:$versions.androidx.testCore"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidx.testEspresso"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$versions.androidx.testEspresso"
 }
