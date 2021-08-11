@@ -40,6 +40,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
     implementation "androidx.appcompat:appcompat:$versions.androidx.appcompat"
     implementation "androidx.core:core-ktx:$versions.androidx.core"
+    implementation "org.fog-rock.frextensions:frextensions:$versions.fogRock.frextensions"
     // test
     testImplementation "junit:junit:$versions.junit"
     testImplementation "com.google.truth:truth:$versions.google.truth"

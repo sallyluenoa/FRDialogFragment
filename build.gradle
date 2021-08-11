@@ -36,6 +36,10 @@ buildscript {
                 ],
                 // @see https://junit.org/junit4/
                 junit: '4.13.2',
+                // @see https://github.com/sallyluenoa?tab=packages
+                fogRock: [
+                        frextensions: '1.0.0',
+                ],
         ]
     }
     repositories {
@@ -53,6 +57,15 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+
+        maven {
+            name = 'GitHubPackages'
+            url = uri('https://maven.pkg.github.com/sallyluenoa/FRExtensions')
+            credentials {
+                username = System.getenv('GITHUB_ACTOR')
+                password = System.getenv('GITHUB_TOKEN')
+            }
+        }
     }
 }
 

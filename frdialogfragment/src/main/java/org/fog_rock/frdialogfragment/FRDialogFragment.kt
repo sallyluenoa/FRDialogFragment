@@ -11,9 +11,8 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
-import org.fog_rock.frdialogfragment.extension.downCast
-import org.fog_rock.frdialogfragment.extension.logE
-import org.fog_rock.frdialogfragment.extension.logW
+import org.fog_rock.frextensions.androidx.log.logE
+import org.fog_rock.frextensions.androidx.log.logW
 
 class FRDialogFragment : DialogFragment() {
 
@@ -123,7 +122,8 @@ class FRDialogFragment : DialogFragment() {
     private val isParentActivity: Boolean by lazy { args.getBoolean(ARGS_IS_PARENT_ACTIVITY, true) }
 
     private val callback: FRDialogFragmentCallback? by lazy {
-        (if (isParentActivity) requireActivity().downCast() else parentFragment.downCast()) ?: run {
+        (if (isParentActivity) requireActivity() as? FRDialogFragmentCallback
+        else parentFragment as? FRDialogFragmentCallback) ?: run {
             logW("No implemented callback.")
             null
         }
