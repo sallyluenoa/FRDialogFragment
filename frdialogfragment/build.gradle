@@ -49,3 +49,9 @@ dependencies {
     androidTestImplementation "androidx.test.ext:truth:$versions.androidx.testCore"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidx.testEspresso"
 }
+
+tasks.withType(dokkaHtml.getClass()).configureEach {
+    pluginsMapConfiguration.set(
+            ["org.jetbrains.dokka.base.DokkaBase": """{ "separateInheritedMembers": true}"""]
+    )
+}
