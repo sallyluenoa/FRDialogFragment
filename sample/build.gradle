@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -42,6 +45,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"
     implementation "androidx.core:core-ktx:$versions.androidx.core"
     implementation "com.google.android.material:material:$versions.google.androidMaterial"
+    implementation "org.fog-rock.frextensions:frextensions:$versions.fogRock.frextensions"
     // test
     testImplementation "junit:junit:$versions.junit"
     testImplementation "com.google.truth:truth:$versions.google.truth"
