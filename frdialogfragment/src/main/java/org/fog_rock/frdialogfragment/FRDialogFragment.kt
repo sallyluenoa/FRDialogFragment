@@ -3,166 +3,195 @@ package org.fog_rock.frdialogfragment
 import android.app.Dialog
 import android.content.Context
 import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
-import org.fog_rock.frextensions.androidx.log.logE
 import org.fog_rock.frextensions.androidx.log.logW
 
+/**
+ * A subclass of DialogFragment to display a alert dialog conveniently.
+ * The class can be displayed positive, negative, and neutral buttons.
+ * @see Builder
+ */
 class FRDialogFragment : DialogFragment() {
 
-    companion object {
-        private const val ARGS_REQUEST_CODE = "request_code"
-        private const val ARGS_TITLE = "title"
-        private const val ARGS_MESSAGE = "message"
-        private const val ARGS_POSITIVE_LABEL = "positive_label"
-        private const val ARGS_NEGATIVE_LABEL = "negative_label"
-        private const val ARGS_NEUTRAL_LABEL = "neutral_label"
-        private const val ARGS_IS_PARENT_ACTIVITY = "is_parent_activity"
+    /**
+     * A callback interface for FRDialogFragment
+     * @see FRDialogFragment
+     */
+    fun interface Callback {
+        /**
+         * This method will be invoked when a button in the dialog is tapped.
+         * @param which A position of the button that was tapped
+         */
+        fun onDialogResult(which: Int)
     }
 
     /**
-     * ビルダークラス
+     * A builder class for FRDialogFragment
+     * @see FRDialogFragment
      */
     class Builder(private val context: Context) {
-        private var _title: String? = null
-        private var _message: String? = null
-        private var _positiveLabel: String? = null
-        private var _negativeLabel: String? = null
-        private var _neutralLabel: String? = null
-        private var _cancelable = true
 
-        fun setTitle(title: String): Builder {
-            this._title = title
-            return this
-        }
-        fun setTitle(@StringRes title: Int): Builder =
-            setTitle(context.getString(title))
-
-        fun setMessage(message: String): Builder {
-            this._message = message
-            return this
-        }
-        fun setMessage(@StringRes message: Int): Builder =
-            setMessage(context.getString(message))
-
-        fun setPositiveLabel(positiveLabel: String): Builder {
-            this._positiveLabel = positiveLabel
-            return this
-        }
-        fun setPositiveLabel(@StringRes positiveLabel: Int): Builder =
-            setPositiveLabel(context.getString(positiveLabel))
-
-        fun setNegativeLabel(negativeLabel: String): Builder {
-            this._negativeLabel = negativeLabel
-            return this
-        }
-        fun setNegativeLabel(@StringRes negativeLabel: Int): Builder =
-            setNegativeLabel(context.getString(negativeLabel))
-
-        fun setNeutralLabel(neutralLabel: String): Builder {
-            this._neutralLabel = neutralLabel
-            return this
-        }
-        fun setNeutralLabel(@StringRes neutralLabel: Int): Builder =
-            setNeutralLabel(context.getString(neutralLabel))
-
-        fun setCancelable(cancelable: Boolean): Builder {
-            this._cancelable = cancelable
-            return this
-        }
+        private val args = Bundle()
+        private var cancelable: Boolean = false
 
         /**
-         * Activity 上に AppDialogFragment を表示.
+         * Set a key associated with the callback.
+         * @param key A callback key
+         * @return This builder object itself
+         * @see FRAppCompatActivity.registerForDialogResult
          */
-        fun show(activity: FragmentActivity, requestCode: Int) {
-            show(activity.supportFragmentManager, requestCode, true)
-        }
+        fun setCallbackKey(key: String): Builder = also { it.args.putString(ARGS_CALLBACK_KEY, key) }
 
         /**
-         * Fragment 上に AppDialogFragment を表示.
+         * Set a title text.
+         * @param title A title text
+         * @return This builder object itself
          */
-        fun show(fragment: Fragment, requestCode: Int) {
-            show(fragment.childFragmentManager, requestCode, false)
-        }
+        fun setTitle(title: String): Builder = also { it.args.putString(ARGS_TITLE, title) }
 
-        private fun show(fragmentManager: FragmentManager, requestCode: Int, isParentActivity: Boolean) {
-            FRDialogFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARGS_REQUEST_CODE, requestCode)
-                    putString(ARGS_TITLE, _title)
-                    putString(ARGS_MESSAGE, _message)
-                    putString(ARGS_POSITIVE_LABEL, _positiveLabel)
-                    putString(ARGS_NEGATIVE_LABEL, _negativeLabel)
-                    putString(ARGS_NEUTRAL_LABEL, _neutralLabel)
-                    putBoolean(ARGS_IS_PARENT_ACTIVITY, isParentActivity)
-                }
-                isCancelable = _cancelable
-            }.show(fragmentManager, null)
+        /**
+         * Set a title text.
+         * @param titleId A string recourse ID of a title text
+         * @return This builder object itself
+         */
+        fun setTitle(@StringRes titleId: Int): Builder = setTitle(context.getString(titleId))
+
+        /**
+         * Set a message.
+         * @param message A message
+         * @return This builder object itself
+         */
+        fun setMessage(message: String): Builder = also { it.args.putString(ARGS_MESSAGE, message) }
+
+        /**
+         * Set a message.
+         * @param messageId A string recourse ID for a message
+         * @return This builder object itself
+         */
+        fun setMessage(@StringRes messageId: Int): Builder = setMessage(context.getString(messageId))
+
+        /**
+         * Set a text of a positive button.
+         * @param text A text of a positive button
+         * @return This builder object itself
+         */
+        fun setPositiveButton(text: String): Builder = also { it.args.putString(ARGS_POS_TEXT, text) }
+
+        /**
+         * Set a text of a positive button.
+         * @param textId A string recourse ID for a text of a positive button
+         * @return This builder object itself
+         */
+        fun setPositiveButton(@StringRes textId: Int): Builder = setPositiveButton(context.getString(textId))
+
+        /**
+         * Set a text of a negative button.
+         * @param text A text of a negative button
+         * @return This builder object itself
+         */
+        fun setNegativeButton(text: String): Builder = also { it.args.putString(ARGS_NEG_TEXT, text) }
+
+        /**
+         * Set a text of a negative button.
+         * @param textId A string recourse ID for a text of a negative button
+         * @return This builder object itself
+         */
+        fun setNegativeButton(@StringRes textId: Int): Builder = setNegativeButton(context.getString(textId))
+
+        /**
+         * Set a text of a neutral button.
+         * @param text A text of a neutral button
+         * @return This builder object itself
+         */
+        fun setNeutralButton(text: String): Builder = also { it.args.putString(ARGS_NEU_TEXT, text) }
+
+        /**
+         * Set a text of a neutral button.
+         * @param textId A string recourse ID for a text of a neutral button
+         * @return This builder object itself
+         */
+        fun setNeutralButton(@StringRes textId: Int): Builder = setNeutralButton(context.getString(textId))
+
+        /**
+         * Set whether a dialog is cancelable or not.
+         * @param cancelable True if a dialog is cancelable, or false otherwise.
+         * @return This builder object itself
+         */
+        fun setCancelable(cancelable: Boolean): Builder = also { it.cancelable = cancelable }
+
+        /**
+         * Creates a FRDialogFragment with arguments supplied to this builder.
+         * @return A FRDialogFragment created from this builder
+         */
+        fun create(): FRDialogFragment = FRDialogFragment().apply {
+            arguments = this@Builder.args
+            isCancelable = this@Builder.cancelable
         }
+    }
+
+    private companion object {
+        const val ARGS_CALLBACK_KEY = "callback_key"
+        const val ARGS_TITLE = "title"
+        const val ARGS_MESSAGE = "message"
+        const val ARGS_POS_TEXT = "pos_text"
+        const val ARGS_NEG_TEXT = "neg_text"
+        const val ARGS_NEU_TEXT = "neu_Text"
     }
 
     private val args: Bundle by lazy {
-        arguments ?: run {
-            logE("Not found arguments.")
-            Bundle()
-        }
+        arguments ?: throw IllegalArgumentException("Not found arguments.")
     }
-    private val requestCode: Int by lazy { args.getInt(ARGS_REQUEST_CODE) }
     private val title: String? by lazy { args.getString(ARGS_TITLE) }
     private val message: String? by lazy { args.getString(ARGS_MESSAGE) }
-    private val positiveLabel: String? by lazy { args.getString(ARGS_POSITIVE_LABEL) }
-    private val negativeLabel: String? by lazy { args.getString(ARGS_NEGATIVE_LABEL) }
-    private val neutralLabel: String? by lazy { args.getString(ARGS_NEUTRAL_LABEL) }
-    private val isParentActivity: Boolean by lazy { args.getBoolean(ARGS_IS_PARENT_ACTIVITY, true) }
+    private val posText: String? by lazy { args.getString(ARGS_POS_TEXT) }
+    private val negText: String? by lazy { args.getString(ARGS_NEG_TEXT) }
+    private val neuText: String? by lazy { args.getString(ARGS_NEU_TEXT) }
 
-    private val callback: FRDialogFragmentCallback? by lazy {
-        (if (isParentActivity) requireActivity() as? FRDialogFragmentCallback
-        else parentFragment as? FRDialogFragmentCallback) ?: run {
-            logW("No implemented callback.")
-            null
+    private val callback: Callback? by lazy {
+        val key = args.getString(ARGS_CALLBACK_KEY) ?: run {
+            logW("Not found callback key.")
+            return@lazy null
         }
+        val activity = requireActivity() as? FRAppCompatActivity ?: run {
+            logW("Activity does not extends FRAppCompatActivity.")
+            return@lazy null
+        }
+        val callback = activity.callbackHolders[key] ?: run {
+            logW("Not found callback from holders.")
+            return@lazy null
+        }
+        callback
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
         AlertDialog.Builder(requireActivity()).apply {
-            if (!title.isNullOrEmpty()) setTitle(title)
-            if (!message.isNullOrEmpty()) setMessage(message)
-            if (!positiveLabel.isNullOrEmpty()) {
-                setPositiveButton(positiveLabel) { _, which ->
+            title?.let { setTitle(it) }
+            message?.let { setMessage(message) }
+            posText?.let {
+                setPositiveButton(it) { _, which ->
                     dismiss()
-                    callDialogResult(which)
+                    callback?.onDialogResult(which)
                 }
             }
-            if (!negativeLabel.isNullOrEmpty()) {
-                setNegativeButton(negativeLabel) { _, which ->
+            negText?.let {
+                setNegativeButton(it) { _, which ->
                     dismiss()
-                    callDialogResult(which)
+                    callback?.onDialogResult(which)
                 }
             }
-            if (!neutralLabel.isNullOrEmpty()) {
-                setNeutralButton(neutralLabel) { _, which ->
+            neuText?.let {
+                setNeutralButton(it) { _, which ->
                     dismiss()
-                    callDialogResult(which)
+                    callback?.onDialogResult(which)
                 }
             }
         }.create()
 
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
-        callDialogResult(FRDialogFragmentResult.BUTTON_CANCEL)
-    }
-
-    private fun callDialogResult(code: Int) {
-        callback?.onDialogResult(
-            requestCode,
-            FRDialogFragmentResult.convertFromCode(code),
-            Intent().apply { putExtras(args) }
-        )
+        callback?.onDialogResult(0)
     }
 }
