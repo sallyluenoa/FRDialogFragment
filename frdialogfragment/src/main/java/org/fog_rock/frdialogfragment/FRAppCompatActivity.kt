@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.fog_rock.frextensions.androidx.log.logI
 
+/**
+ * A subclass of AppCompatActivity to keep dialog callbacks in the holder.
+ */
 open class FRAppCompatActivity: AppCompatActivity() {
 
     internal val callbackHolders: MutableMap<String, FRDialogFragment.Callback> = mutableMapOf()
@@ -15,6 +18,11 @@ open class FRAppCompatActivity: AppCompatActivity() {
         enabledRegisterToCallbackHolders = false
     }
 
+    /**
+     * Register a callback in the holder to receive the result from the dialog.
+     * @param callback A dialog callback
+     * @return A key associated with the callback
+     */
     fun registerForDialogResult(callback: FRDialogFragment.Callback): String {
         if (!enabledRegisterToCallbackHolders) {
             throw IllegalStateException(

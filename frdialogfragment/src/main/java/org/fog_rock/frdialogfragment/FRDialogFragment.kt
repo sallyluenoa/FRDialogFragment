@@ -9,39 +9,123 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import org.fog_rock.frextensions.androidx.log.logW
 
+/**
+ * A subclass of DialogFragment to display a alert dialog conveniently.
+ * The class can be displayed positive, negative, and neutral buttons.
+ * @see Builder
+ */
 class FRDialogFragment : DialogFragment() {
 
+    /**
+     * A callback interface for FRDialogFragment
+     * @see FRDialogFragment
+     */
     fun interface Callback {
+        /**
+         * This method will be invoked when a button in the dialog is tapped.
+         * @param which A position of the button that was tapped
+         */
         fun onDialogResult(which: Int)
     }
 
     /**
-     * ビルダークラス
+     * A builder class for FRDialogFragment
+     * @see FRDialogFragment
      */
     class Builder(private val context: Context) {
 
         private val args = Bundle()
         private var cancelable: Boolean = false
 
+        /**
+         * Set a key associated with the callback.
+         * @param key A callback key
+         * @return This builder object itself
+         * @see FRAppCompatActivity.registerForDialogResult
+         */
         fun setCallbackKey(key: String): Builder = also { it.args.putString(ARGS_CALLBACK_KEY, key) }
 
+        /**
+         * Set a title text.
+         * @param title A title text
+         * @return This builder object itself
+         */
         fun setTitle(title: String): Builder = also { it.args.putString(ARGS_TITLE, title) }
+
+        /**
+         * Set a title text.
+         * @param titleId A string recourse ID of a title text
+         * @return This builder object itself
+         */
         fun setTitle(@StringRes titleId: Int): Builder = setTitle(context.getString(titleId))
 
+        /**
+         * Set a message.
+         * @param message A message
+         * @return This builder object itself
+         */
         fun setMessage(message: String): Builder = also { it.args.putString(ARGS_MESSAGE, message) }
+
+        /**
+         * Set a message.
+         * @param messageId A string recourse ID for a message
+         * @return This builder object itself
+         */
         fun setMessage(@StringRes messageId: Int): Builder = setMessage(context.getString(messageId))
 
+        /**
+         * Set a text of a positive button.
+         * @param text A text of a positive button
+         * @return This builder object itself
+         */
         fun setPositiveButton(text: String): Builder = also { it.args.putString(ARGS_POS_TEXT, text) }
+
+        /**
+         * Set a text of a positive button.
+         * @param textId A string recourse ID for a text of a positive button
+         * @return This builder object itself
+         */
         fun setPositiveButton(@StringRes textId: Int): Builder = setPositiveButton(context.getString(textId))
 
+        /**
+         * Set a text of a negative button.
+         * @param text A text of a negative button
+         * @return This builder object itself
+         */
         fun setNegativeButton(text: String): Builder = also { it.args.putString(ARGS_NEG_TEXT, text) }
+
+        /**
+         * Set a text of a negative button.
+         * @param textId A string recourse ID for a text of a negative button
+         * @return This builder object itself
+         */
         fun setNegativeButton(@StringRes textId: Int): Builder = setNegativeButton(context.getString(textId))
 
+        /**
+         * Set a text of a neutral button.
+         * @param text A text of a neutral button
+         * @return This builder object itself
+         */
         fun setNeutralButton(text: String): Builder = also { it.args.putString(ARGS_NEU_TEXT, text) }
+
+        /**
+         * Set a text of a neutral button.
+         * @param textId A string recourse ID for a text of a neutral button
+         * @return This builder object itself
+         */
         fun setNeutralButton(@StringRes textId: Int): Builder = setNeutralButton(context.getString(textId))
 
+        /**
+         * Set whether a dialog is cancelable or not.
+         * @param cancelable True if a dialog is cancelable, or false otherwise.
+         * @return This builder object itself
+         */
         fun setCancelable(cancelable: Boolean): Builder = also { it.cancelable = cancelable }
 
+        /**
+         * Creates a FRDialogFragment with arguments supplied to this builder.
+         * @return A FRDialogFragment created from this builder
+         */
         fun create(): FRDialogFragment = FRDialogFragment().apply {
             arguments = this@Builder.args
             isCancelable = this@Builder.cancelable
