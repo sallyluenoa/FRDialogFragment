@@ -1,0 +1,37 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:org.fog_rock.frfragmentlistener.activity////PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.activity/index.html
+$dokka.location:org.fog_rock.frfragmentlistener.activity/FRAppCompatActivity///PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.activity/-f-r-app-compat-activity/index.html
+$dokka.location:org.fog_rock.frfragmentlistener.activity/FRAppCompatActivity/FRAppCompatActivity/#/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.activity/-f-r-app-compat-activity/-f-r-app-compat-activity.html
+$dokka.location:org.fog_rock.frfragmentlistener.activity/FRAppCompatActivity/registerForDialogResult/#org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Callback/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.activity/-f-r-app-compat-activity/register-for-dialog-result.html
+$dokka.location:org.fog_rock.frfragmentlistener.activity/FRAppCompatActivity/registerForFragmentListener/#org.fog_rock.frfragmentlistener.fragment.FRFragmentListener/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.activity/-f-r-app-compat-activity/register-for-fragment-listener.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog////PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/index.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder///PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/index.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/Builder/#android.content.Context/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/-builder.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/create/#/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/create.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setCallbackKey/#kotlin.String/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-callback-key.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setCancelable/#kotlin.Boolean/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-cancelable.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setMessage/#kotlin.Int/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-message.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setMessage/#kotlin.String/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-message.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setNegativeButton/#kotlin.Int/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-negative-button.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setNegativeButton/#kotlin.String/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-negative-button.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setNeutralButton/#kotlin.Int/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-neutral-button.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setNeutralButton/#kotlin.String/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-neutral-button.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setPositiveButton/#kotlin.Int/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-positive-button.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setPositiveButton/#kotlin.String/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-positive-button.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setTitle/#kotlin.Int/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-title.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder/setTitle/#kotlin.String/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-builder/set-title.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Callback///PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-callback/index.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Callback/onDialogResult/#kotlin.Int/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-callback/on-dialog-result.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment///PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/index.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment/FRDialogFragment/#/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/-f-r-dialog-fragment.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment/onCancel/#android.content.DialogInterface/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/on-cancel.html
+$dokka.location:org.fog_rock.frfragmentlistener.dialog/FRDialogFragment/onCreateDialog/#android.os.Bundle?/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.dialog/-f-r-dialog-fragment/on-create-dialog.html
+$dokka.location:org.fog_rock.frfragmentlistener.fragment////PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.fragment/index.html
+$dokka.location:org.fog_rock.frfragmentlistener.fragment//restoreFRFragmentEventListener/androidx.fragment.app.Fragment#android.os.Bundle#kotlin.String/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.fragment/restore-f-r-fragment-event-listener.html
+$dokka.location:org.fog_rock.frfragmentlistener.fragment//restoreFragmentEventListener/androidx.fragment.app.Fragment#android.os.Bundle#kotlin.String/PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.fragment/restore-fragment-event-listener.html
+$dokka.location:org.fog_rock.frfragmentlistener.fragment/FRFragmentListener///PointingToDeclaration/frfragmentlistener/org.fog_rock.frfragmentlistener.fragment/-f-r-fragment-listener/index.html
+org.fog_rock.frfragmentlistener.activity
+org.fog_rock.frfragmentlistener.dialog
+org.fog_rock.frfragmentlistener.fragment
+
