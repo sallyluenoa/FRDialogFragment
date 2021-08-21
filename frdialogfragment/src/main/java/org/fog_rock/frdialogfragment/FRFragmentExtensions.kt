@@ -8,10 +8,10 @@ import org.fog_rock.frextensions.androidx.log.logW
  * Restore a fragment listener associated with a key from the activity holder.
  * @param args Arguments of a fragment
  * @param key A key associated with the listener
- * @return A fragment event listener with the specified type
+ * @return A fragment listener with the specified type
  * @see org.fog_rock.frdialogfragment.FRAppCompatActivity.registerForFragmentListener
  */
-inline fun <reified T: FRFragmentEventListener> Fragment.restoreFragmentEventListener(args: Bundle, key: String): T? {
+inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener(args: Bundle, key: String): T? {
     val listener = restoreFRFragmentEventListener(args, key) ?: return null
     return listener as? T ?: run {
         logW("Invalid subclass of FragmentEventListener.")
@@ -24,10 +24,10 @@ inline fun <reified T: FRFragmentEventListener> Fragment.restoreFragmentEventLis
  * It would be called by Fragment#restoreFragmentEventListener.
  * @param args Arguments of a fragment
  * @param key A key associated with the listener
- * @return A fragment event listener
+ * @return A fragment listener
  * @see org.fog_rock.frdialogfragment.restoreFragmentEventListener
  */
-fun Fragment.restoreFRFragmentEventListener(args: Bundle, key: String): FRFragmentEventListener? {
+fun Fragment.restoreFRFragmentEventListener(args: Bundle, key: String): FRFragmentListener? {
     val callbackKey = args.getString(key) ?: run {
         logW("Not found fragment listener key.")
         return null

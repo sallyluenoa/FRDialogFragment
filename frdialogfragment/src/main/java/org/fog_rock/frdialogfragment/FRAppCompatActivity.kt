@@ -9,7 +9,7 @@ import org.fog_rock.frextensions.androidx.log.logI
  */
 open class FRAppCompatActivity: AppCompatActivity() {
 
-    internal val fragmentListenerHolder: MutableMap<String, FRFragmentEventListener> = mutableMapOf()
+    internal val fragmentListenerHolder: MutableMap<String, FRFragmentListener> = mutableMapOf()
 
     private var enabledFragmentListenerRegistration = true
 
@@ -30,12 +30,12 @@ open class FRAppCompatActivity: AppCompatActivity() {
     /**
      * Register a fragment listener in the holder to receive events from the fragment.
      * The registered listener would be restored in the fragment.
-     * @param listener A fragment event listener
+     * @param listener A fragment listener
      * @return A key associated with the listener
      * @throws IllegalStateException If it is called after Activity#onCreate().
      * @see org.fog_rock.frdialogfragment.restoreFragmentEventListener
      */
-    fun registerForFragmentListener(listener: FRFragmentEventListener): String {
+    fun registerForFragmentListener(listener: FRFragmentListener): String {
         if (!enabledFragmentListenerRegistration) {
             throw IllegalStateException(
                 "Cannot register fragment listener. Must be called before Activity#onCreate().")

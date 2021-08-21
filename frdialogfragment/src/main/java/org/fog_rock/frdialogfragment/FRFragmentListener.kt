@@ -5,4 +5,4 @@ package org.fog_rock.frdialogfragment
  * @see org.fog_rock.frdialogfragment.FRAppCompatActivity.registerForFragmentListener
  * @see org.fog_rock.frdialogfragment.restoreFragmentEventListener
  */
-interface FRFragmentEventListener
+interface FRFragmentListener

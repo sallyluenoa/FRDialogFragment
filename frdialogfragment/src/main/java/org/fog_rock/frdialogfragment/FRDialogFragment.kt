@@ -20,7 +20,7 @@ class FRDialogFragment : DialogFragment() {
      * A callback interface for FRDialogFragment
      * @see FRDialogFragment
      */
-    fun interface Callback : FRFragmentEventListener {
+    fun interface Callback : FRFragmentListener {
         /**
          * This method will be invoked when a button in the dialog is tapped.
          * @param which A position of the button that was tapped
