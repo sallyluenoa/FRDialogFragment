@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FRDialogFragmentSample</string>
+    <string name="app_name">FRFragmentListenerSample</string>
 
     <string name="title">Title</string>
     <string name="message">Message</string>
