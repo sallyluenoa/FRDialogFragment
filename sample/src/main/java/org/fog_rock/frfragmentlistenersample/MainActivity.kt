@@ -1,10 +1,10 @@
-package org.fog_rock.frdialogfragmentsample
+package org.fog_rock.frfragmentlistenersample
 
 import android.os.Bundle
-import org.fog_rock.frdialogfragment.FRAppCompatActivity
-import org.fog_rock.frdialogfragment.FRDialogFragment
-import org.fog_rock.frdialogfragmentsample.databinding.ActivityMainBinding
 import org.fog_rock.frextensions.androidx.log.logI
+import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
+import org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
+import org.fog_rock.frfragmentlistenersample.databinding.ActivityMainBinding
 
 class MainActivity : FRAppCompatActivity() {
 
