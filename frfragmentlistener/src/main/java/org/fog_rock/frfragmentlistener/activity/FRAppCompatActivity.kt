@@ -1,8 +1,10 @@
-package org.fog_rock.frfragmentlistener
+package org.fog_rock.frfragmentlistener.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.fog_rock.frextensions.androidx.log.logI
+import org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
+import org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
 
 /**
  * A subclass of AppCompatActivity to keep fragment listeners in the holder.
@@ -33,7 +35,7 @@ open class FRAppCompatActivity: AppCompatActivity() {
      * @param listener A fragment listener
      * @return A key associated with the listener
      * @throws IllegalStateException If it is called after Activity#onCreate().
-     * @see org.fog_rock.frdialogfragment.restoreFragmentEventListener
+     * @see org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
      */
     fun registerForFragmentListener(listener: FRFragmentListener): String {
         if (!enabledFragmentListenerRegistration) {

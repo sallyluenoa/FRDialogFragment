@@ -1,15 +1,16 @@
-package org.fog_rock.frfragmentlistener
+package org.fog_rock.frfragmentlistener.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import org.fog_rock.frextensions.androidx.log.logW
+import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
 
 /**
  * Restore a fragment listener associated with a key from the activity holder.
  * @param args Arguments of a fragment
  * @param key A key associated with the listener
  * @return A fragment listener with the specified type
- * @see org.fog_rock.frdialogfragment.FRAppCompatActivity.registerForFragmentListener
+ * @see org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity.registerForFragmentListener
  */
 inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener(args: Bundle, key: String): T? {
     val listener = restoreFRFragmentEventListener(args, key) ?: return null
@@ -25,7 +26,7 @@ inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener
  * @param args Arguments of a fragment
  * @param key A key associated with the listener
  * @return A fragment listener
- * @see org.fog_rock.frdialogfragment.restoreFragmentEventListener
+ * @see org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
  */
 fun Fragment.restoreFRFragmentEventListener(args: Bundle, key: String): FRFragmentListener? {
     val callbackKey = args.getString(key) ?: run {

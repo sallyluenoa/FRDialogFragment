@@ -1,4 +1,4 @@
-package org.fog_rock.frfragmentlistener
+package org.fog_rock.frfragmentlistener.dialog
 
 import android.app.Dialog
 import android.content.Context
@@ -7,18 +7,20 @@ import android.os.Bundle
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
+import org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
+import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
 
 /**
  * A subclass of DialogFragment to display a alert dialog conveniently.
  * The class can be displayed positive, negative, and neutral buttons.
- * @see Builder
- * @see Callback
+ * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Builder
+ * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Callback
  */
 class FRDialogFragment : DialogFragment() {
 
     /**
      * A callback interface for FRDialogFragment
-     * @see FRDialogFragment
+     * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
      */
     fun interface Callback : FRFragmentListener {
         /**
@@ -30,7 +32,7 @@ class FRDialogFragment : DialogFragment() {
 
     /**
      * A builder class for FRDialogFragment
-     * @see FRDialogFragment
+     * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
      */
     class Builder(private val context: Context) {
 
@@ -41,7 +43,7 @@ class FRDialogFragment : DialogFragment() {
          * Set a key associated with the callback.
          * @param key A callback key
          * @return This builder object itself
-         * @see FRAppCompatActivity.registerForDialogResult
+         * @see org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity.registerForDialogResult
          */
         fun setCallbackKey(key: String): Builder = also { it.args.putString(ARGS_CALLBACK_KEY, key) }
 
