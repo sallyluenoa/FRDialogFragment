@@ -1,6 +1,8 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
+    id 'org.jetbrains.dokka'
+    id 'maven-publish'
 }
 
 android {
@@ -8,27 +10,19 @@ android {
     compileSdkVersion buildConfig.compileSdk
 
     defaultConfig {
-        applicationId "org.fog_rock.frdialogfragmentsample"
         minSdkVersion buildConfig.minSdk
         targetSdkVersion buildConfig.targetSdk
         versionCode buildConfig.versionCode
         versionName buildConfig.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
 
         archivesBaseName = "$buildConfig.applicationName-v$versionName.$versionCode"
     }
-    signingConfigs {
-        release {
-            storeFile rootProject.file('sallyluenoa_sample.jks')
-            storePassword System.getenv('STORE_PASSWORD')
-            keyAlias System.getenv('KEY_ALIAS')
-            keyPassword System.getenv('KEY_PASSWORD')
-        }
-    }
+
     buildTypes {
         release {
-            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -40,27 +34,46 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
-    buildFeatures {
-        viewBinding true
+}
+
+publishing {
+    repositories {
+        maven {
+            name = 'GitHubPackages'
+            url = uri('https://maven.pkg.github.com/sallyluenoa/FRFragmentListener')
+            credentials {
+                username = System.getenv('GITHUB_ACTOR')
+                password = System.getenv('GITHUB_TOKEN')
+            }
+        }
+    }
+    publications {
+        maven(MavenPublication) {
+            groupId "org.fog-rock.$buildConfig.applicationId"
+            artifactId buildConfig.applicationId
+            version buildConfig.versionName
+            artifact("$buildDir/outputs/aar/$archivesBaseName-release.aar")
+        }
     }
 }
 
 dependencies {
     // main
-    implementation project(':frfragmentlistener')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
     implementation "androidx.appcompat:appcompat:$versions.androidx.appcompat"
-    implementation "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"
     implementation "androidx.core:core-ktx:$versions.androidx.core"
-    implementation "com.google.android.material:material:$versions.google.androidMaterial"
     implementation "org.fog-rock.frextensions:frextensions:$versions.fogRock.frextensions"
     // test
     testImplementation "junit:junit:$versions.junit"
     testImplementation "com.google.truth:truth:$versions.google.truth"
     // androidTest
-    androidTestImplementation "androidx.test:core-ktx:$versions.androidx.testCore"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidx.testJunit"
     androidTestImplementation "androidx.test.ext:truth:$versions.androidx.testCore"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidx.testEspresso"
-    androidTestImplementation "androidx.test.espresso:espresso-intents:$versions.androidx.testEspresso"
+}
+
+tasks.withType(dokkaHtml.getClass()).configureEach {
+    pluginsMapConfiguration.set(
+            ["org.jetbrains.dokka.base.DokkaBase": """{ "separateInheritedMembers": true}"""]
+    )
 }

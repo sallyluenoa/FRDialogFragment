@@ -3,8 +3,8 @@ buildscript {
     ext {
         // App Build Config
         buildConfig = [
-                applicationId: 'frdialogfragment',
-                applicationName: 'FRDialogFragment',
+                applicationId: 'frfragmentlistener',
+                applicationName: 'FRFragmentListener',
                 versionName: project.findProperty("version.name") ?: '0.0.1-SNAPSHOT',
                 versionCode: project.findProperty("version.code") as Integer ?: 1,
                 buildTools: "30.0.2",
