@@ -7,12 +7,12 @@ import android.os.Bundle
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-import org.fog_rock.frextensions.androidx.log.logW
 
 /**
  * A subclass of DialogFragment to display a alert dialog conveniently.
  * The class can be displayed positive, negative, and neutral buttons.
  * @see Builder
+ * @see Callback
  */
 class FRDialogFragment : DialogFragment() {
 
@@ -20,7 +20,7 @@ class FRDialogFragment : DialogFragment() {
      * A callback interface for FRDialogFragment
      * @see FRDialogFragment
      */
-    fun interface Callback {
+    fun interface Callback : FRFragmentEventListener {
         /**
          * This method will be invoked when a button in the dialog is tapped.
          * @param which A position of the button that was tapped
@@ -144,27 +144,12 @@ class FRDialogFragment : DialogFragment() {
     private val args: Bundle by lazy {
         arguments ?: throw IllegalArgumentException("Not found arguments.")
     }
+    private val callback: Callback? by lazy { restoreFragmentEventListener(args, ARGS_CALLBACK_KEY) }
     private val title: String? by lazy { args.getString(ARGS_TITLE) }
     private val message: String? by lazy { args.getString(ARGS_MESSAGE) }
     private val posText: String? by lazy { args.getString(ARGS_POS_TEXT) }
     private val negText: String? by lazy { args.getString(ARGS_NEG_TEXT) }
     private val neuText: String? by lazy { args.getString(ARGS_NEU_TEXT) }
-
-    private val callback: Callback? by lazy {
-        val key = args.getString(ARGS_CALLBACK_KEY) ?: run {
-            logW("Not found callback key.")
-            return@lazy null
-        }
-        val activity = requireActivity() as? FRAppCompatActivity ?: run {
-            logW("Activity does not extends FRAppCompatActivity.")
-            return@lazy null
-        }
-        val callback = activity.callbackHolders[key] ?: run {
-            logW("Not found callback from holders.")
-            return@lazy null
-        }
-        callback
-    }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
         AlertDialog.Builder(requireActivity()).apply {
