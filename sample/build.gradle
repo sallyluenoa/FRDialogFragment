@@ -39,7 +39,7 @@ android {
 
 dependencies {
     // main
-    implementation project(':frdialogfragment')
+    implementation project(':frfragmentlistener')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
     implementation "androidx.appcompat:appcompat:$versions.androidx.appcompat"
     implementation "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"

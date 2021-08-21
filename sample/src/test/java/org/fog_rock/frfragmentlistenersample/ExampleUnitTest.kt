@@ -1,4 +1,4 @@
-package org.fog_rock.frdialogfragment
+package org.fog_rock.frfragmentlistenersample
 
 import org.junit.Test
 

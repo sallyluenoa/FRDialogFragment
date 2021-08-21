@@ -1,4 +1,4 @@
-package org.fog_rock.frdialogfragment
+package org.fog_rock.frfragmentlistener
 
 import android.app.Dialog
 import android.content.Context
