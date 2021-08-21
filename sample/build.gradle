@@ -18,7 +18,14 @@ android {
 
         archivesBaseName = "$buildConfig.applicationName-v$versionName.$versionCode"
     }
-
+    signingConfigs {
+        release {
+            storeFile rootProject.file('sallyluenoa_sample.jks')
+            storePassword System.getenv('STORE_PASSWORD')
+            keyAlias System.getenv('KEY_ALIAS')
+            keyPassword System.getenv('KEY_PASSWORD')
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
