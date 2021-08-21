@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'org.jetbrains.dokka'
+    id 'maven-publish'
 }
 
 android {
@@ -32,6 +33,27 @@ android {
     }
     kotlinOptions {
         jvmTarget = '11'
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = 'GitHubPackages'
+            url = uri('https://maven.pkg.github.com/sallyluenoa/FRFragmentListener')
+            credentials {
+                username = System.getenv('GITHUB_ACTOR')
+                password = System.getenv('GITHUB_TOKEN')
+            }
+        }
+    }
+    publications {
+        maven(MavenPublication) {
+            groupId "org.fog-rock.$buildConfig.applicationId"
+            artifactId buildConfig.applicationId
+            version buildConfig.versionName
+            artifact("$buildDir/outputs/aar/$archivesBaseName-release.aar")
+        }
     }
 }
 
