@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">FRFragmentListenerSample</string>
 
+    <string name="empty"/>
     <string name="title">Title</string>
     <string name="message">Message</string>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
+    <string name="positive">Positive</string>
+    <string name="negative">Negative</string>
+    <string name="neutral">Neutral</string>
+    <string name="cancelable">Cancelable</string>
+    <string name="result">Result</string>
+
+    <string name="callback_1">Callback 1</string>
+    <string name="callback_2">Callback 2</string>
+
+    <string-array name="callback_list">
+        <item>@string/callback_1</item>
+        <item>@string/callback_2</item>
+    </string-array>
 
 </resources>
