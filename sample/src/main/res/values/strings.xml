@@ -8,10 +8,15 @@
     <string name="negative">Negative</string>
     <string name="neutral">Neutral</string>
     <string name="cancelable">Cancelable</string>
+    <string name="non_cancelable">Non-cancelable</string>
     <string name="result">Result</string>
-
     <string name="callback_1">Callback 1</string>
     <string name="callback_2">Callback 2</string>
+
+    <string-array name="cancelable_list">
+        <item>@string/cancelable</item>
+        <item>@string/non_cancelable</item>
+    </string-array>
 
     <string-array name="callback_list">
         <item>@string/callback_1</item>

@@ -68,11 +68,11 @@
             />
 
         <include
-            layout="@layout/layout_item_switch_textview"
+            layout="@layout/layout_item_switch_spinner"
             android:id="@+id/layout_item_cancelable"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:text="@{@string/cancelable}"
+            app:entries="@{@stringArray/cancelable_list}"
             app:checked="@{false}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -13,9 +13,8 @@
             android:id="@+id/textView_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/empty"
-            android:textSize="30sp"
-            android:hint="@string/result"
+            android:text="@string/result"
+            android:textSize="24sp"
             android:layout_margin="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +29,10 @@
             app:layout_constraintTop_toBottomOf="@id/textView_result"
             app:layout_constraintBottom_toTopOf="@id/button_dialog" >
 
-            <include layout="@layout/layout_items_dialog_settings" />
+            <include
+                layout="@layout/layout_items_dialog_settings"
+                android:id="@+id/contentView_setting"
+                />
         </ScrollView>
 
         <Button
