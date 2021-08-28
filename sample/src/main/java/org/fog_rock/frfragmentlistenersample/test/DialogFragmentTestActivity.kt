@@ -1,13 +1,17 @@
-package org.fog_rock.frfragmentlistenersample
+package org.fog_rock.frfragmentlistenersample.test
 
 import android.os.Bundle
 import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
 import org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
-import org.fog_rock.frfragmentlistenersample.databinding.ActivityDialogSampleBinding
+import org.fog_rock.frfragmentlistenersample.R
+import org.fog_rock.frfragmentlistenersample.databinding.ActivityDialogFragmentTestBinding
 
-class DialogSampleActivity : FRAppCompatActivity() {
+/**
+ * This is a sample code for android test.
+ */
+class DialogFragmentTestActivity : FRAppCompatActivity() {
 
-    private lateinit var binding: ActivityDialogSampleBinding
+    private lateinit var binding: ActivityDialogFragmentTestBinding
 
     private val callback1Key = registerForDialogResult{
         binding.textViewResult.text = "Callback1 Result: $it"
@@ -63,7 +67,7 @@ class DialogSampleActivity : FRAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityDialogSampleBinding.inflate(layoutInflater)
+        binding = ActivityDialogFragmentTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.buttonDialog.setOnClickListener {

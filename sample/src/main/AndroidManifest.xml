@@ -19,13 +19,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.fog_rock.frfragmentlistenersample.SampleActivity"
+            android:name="org.fog_rock.frfragmentlistenersample.sample.SampleActivity"
             android:exported="false" />
         <activity
-            android:name="org.fog_rock.frfragmentlistenersample.DialogSampleActivity"
+            android:name="org.fog_rock.frfragmentlistenersample.test.DialogFragmentTestActivity"
             android:exported="false" />
         <activity
-            android:name="org.fog_rock.frfragmentlistenersample.FragmentSampleActivity"
+            android:name="org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity"
             android:exported="false" />
     </application>
 

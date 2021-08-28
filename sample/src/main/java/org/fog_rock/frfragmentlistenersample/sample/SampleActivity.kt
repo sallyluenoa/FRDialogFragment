@@ -1,9 +1,10 @@
-package org.fog_rock.frfragmentlistenersample
+package org.fog_rock.frfragmentlistenersample.sample
 
 import android.os.Bundle
 import org.fog_rock.frextensions.androidx.fragment.replaceFragment
 import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
 import org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
+import org.fog_rock.frfragmentlistenersample.R
 import org.fog_rock.frfragmentlistenersample.databinding.ActivitySampleBinding
 
 /**

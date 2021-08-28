@@ -5,15 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.fog_rock.frfragmentlistenersample.FragmentSampleActivity">
+    tools:context="org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity">
 
     <TextView
         android:id="@+id/textView_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/empty"
-        android:textSize="30sp"
-        android:hint="@string/result"
+        android:text="@string/result"
+        android:textSize="24sp"
         android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

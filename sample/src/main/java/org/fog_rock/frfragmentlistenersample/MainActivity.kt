@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.fog_rock.frextensions.androidx.content.startActivity
 import org.fog_rock.frfragmentlistenersample.databinding.ActivityMainBinding
+import org.fog_rock.frfragmentlistenersample.sample.SampleActivity
+import org.fog_rock.frfragmentlistenersample.test.DialogFragmentTestActivity
+import org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,10 +22,10 @@ class MainActivity : AppCompatActivity() {
             startActivity<SampleActivity>()
         }
         binding.buttonDialogSample.setOnClickListener {
-            startActivity<DialogSampleActivity>()
+            startActivity<DialogFragmentTestActivity>()
         }
         binding.buttonFragmentSample.setOnClickListener {
-            startActivity<FragmentSampleActivity>()
+            startActivity<FragmentListenerTestActivity>()
         }
     }
 }

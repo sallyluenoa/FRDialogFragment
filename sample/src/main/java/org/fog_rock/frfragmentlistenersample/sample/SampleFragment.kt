@@ -1,4 +1,4 @@
-package org.fog_rock.frfragmentlistenersample
+package org.fog_rock.frfragmentlistenersample.sample
 
 import android.os.Bundle
 import android.view.LayoutInflater
