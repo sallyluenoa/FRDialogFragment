@@ -18,6 +18,17 @@
         />
 
     <Button
+        android:id="@+id/button_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show sample"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button_dialog_sample"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
         android:id="@+id/button_dialog_sample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -72,6 +72,17 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidx.testEspresso"
 }
 
+dokkaHtml {
+    dokkaSourceSets {
+        configureEach {
+            samples.from(
+                    "../sample/src/main/java/org/fog_rock/frfragmentlistenersample/SampleActivity.kt",
+                    "../sample/src/main/java/org/fog_rock/frfragmentlistenersample/SampleFragment.kt"
+            )
+        }
+    }
+}
+
 tasks.withType(dokkaHtml.getClass()).configureEach {
     pluginsMapConfiguration.set(
             ["org.jetbrains.dokka.base.DokkaBase": """{ "separateInheritedMembers": true}"""]

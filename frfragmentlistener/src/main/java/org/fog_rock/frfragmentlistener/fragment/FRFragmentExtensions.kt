@@ -1,19 +1,16 @@
 package org.fog_rock.frfragmentlistener.fragment
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
 import org.fog_rock.frextensions.androidx.log.logW
 import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
 
 /**
- * Restore a fragment listener associated with a key from the activity holder.
- * @param args Arguments of a fragment
- * @param key A key associated with the listener
+ * Restore a fragment listener from the arguments and the activity holder.
  * @return A fragment listener with the specified type
- * @see org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity.registerForFragmentListener
+ * @sample org.fog_rock.frfragmentlistenersample.SampleFragment.listener
  */
-inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener(args: Bundle, key: String): T? {
-    val listener = restoreFRFragmentEventListener(args, key) ?: return null
+inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener(): T? {
+    val listener = restoreFRFragmentEventListener() ?: return null
     return listener as? T ?: run {
         logW("Invalid subclass of FragmentEventListener.")
         return null
@@ -21,15 +18,10 @@ inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener
 }
 
 /**
- * Restore a fragment listener associated with a key from the activity holder.
- * It would be called by Fragment#restoreFragmentEventListener.
- * @param args Arguments of a fragment
- * @param key A key associated with the listener
- * @return A fragment listener
- * @see org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
+ * @suppress It would be called by Fragment#restoreFragmentEventListener.
  */
-fun Fragment.restoreFRFragmentEventListener(args: Bundle, key: String): FRFragmentListener? {
-    val callbackKey = args.getString(key) ?: run {
+fun Fragment.restoreFRFragmentEventListener(): FRFragmentListener? {
+    val callbackKey = arguments?.getString(FRFragmentListener.ARGS_LISTENER_KEY) ?: run {
         logW("Not found fragment listener key.")
         return null
     }

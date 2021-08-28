@@ -2,6 +2,10 @@
     <string name="app_name">FRFragmentListenerSample</string>
 
     <string name="empty"/>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
     <string name="title">Title</string>
     <string name="message">Message</string>
     <string name="positive">Positive</string>

@@ -15,6 +15,8 @@ import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
  * The class can be displayed positive, negative, and neutral buttons.
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Builder
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Callback
+ * @sample org.fog_rock.frfragmentlistenersample.SampleActivity.dialogCallbackKey
+ * @sample org.fog_rock.frfragmentlistenersample.SampleActivity.showDialog
  */
 class FRDialogFragment : DialogFragment() {
 
@@ -45,7 +47,8 @@ class FRDialogFragment : DialogFragment() {
          * @return This builder object itself
          * @see org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity.registerForDialogResult
          */
-        fun setCallbackKey(key: String): Builder = also { it.args.putString(ARGS_CALLBACK_KEY, key) }
+        fun setCallbackKey(key: String): Builder =
+            also { it.args.putString(FRFragmentListener.ARGS_LISTENER_KEY, key) }
 
         /**
          * Set a title text.
@@ -135,7 +138,6 @@ class FRDialogFragment : DialogFragment() {
     }
 
     private companion object {
-        const val ARGS_CALLBACK_KEY = "callback_key"
         const val ARGS_TITLE = "title"
         const val ARGS_MESSAGE = "message"
         const val ARGS_POS_TEXT = "pos_text"
@@ -146,7 +148,7 @@ class FRDialogFragment : DialogFragment() {
     private val args: Bundle by lazy {
         arguments ?: throw IllegalArgumentException("Not found arguments.")
     }
-    private val callback: Callback? by lazy { restoreFragmentEventListener(args, ARGS_CALLBACK_KEY) }
+    private val callback: Callback? by lazy { restoreFragmentEventListener() }
     private val title: String? by lazy { args.getString(ARGS_TITLE) }
     private val message: String? by lazy { args.getString(ARGS_MESSAGE) }
     private val posText: String? by lazy { args.getString(ARGS_POS_TEXT) }

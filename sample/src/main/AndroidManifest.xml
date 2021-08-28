@@ -19,6 +19,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="org.fog_rock.frfragmentlistenersample.SampleActivity"
+            android:exported="false" />
+        <activity
             android:name="org.fog_rock.frfragmentlistenersample.DialogSampleActivity"
             android:exported="false" />
         <activity
