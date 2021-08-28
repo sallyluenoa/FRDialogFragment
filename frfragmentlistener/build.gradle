@@ -76,8 +76,8 @@ dokkaHtml {
     dokkaSourceSets {
         configureEach {
             samples.from(
-                    "../sample/src/main/java/org/fog_rock/frfragmentlistenersample/SampleActivity.kt",
-                    "../sample/src/main/java/org/fog_rock/frfragmentlistenersample/SampleFragment.kt"
+                    "../sample/src/main/java/org/fog_rock/frfragmentlistenersample/sample/SampleActivity.kt",
+                    "../sample/src/main/java/org/fog_rock/frfragmentlistenersample/sample/SampleFragment.kt"
             )
         }
     }

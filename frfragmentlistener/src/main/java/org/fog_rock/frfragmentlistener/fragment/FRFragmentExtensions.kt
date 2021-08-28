@@ -7,7 +7,7 @@ import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
 /**
  * Restore a fragment listener from the arguments and the activity holder.
  * @return A fragment listener with the specified type
- * @sample org.fog_rock.frfragmentlistenersample.SampleFragment.listener
+ * @sample org.fog_rock.frfragmentlistenersample.sample.SampleFragment.listener
  */
 inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener(): T? {
     val listener = restoreFRFragmentEventListener() ?: return null

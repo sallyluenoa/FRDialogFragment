@@ -15,8 +15,8 @@ import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
  * The class can be displayed positive, negative, and neutral buttons.
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Builder
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Callback
- * @sample org.fog_rock.frfragmentlistenersample.SampleActivity.dialogCallbackKey
- * @sample org.fog_rock.frfragmentlistenersample.SampleActivity.showDialog
+ * @sample org.fog_rock.frfragmentlistenersample.sample.SampleActivity.dialogCallbackKey
+ * @sample org.fog_rock.frfragmentlistenersample.sample.SampleActivity.showDialog
  */
 class FRDialogFragment : DialogFragment() {
 
