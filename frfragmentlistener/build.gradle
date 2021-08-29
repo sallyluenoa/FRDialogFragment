@@ -63,13 +63,6 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$versions.androidx.appcompat"
     implementation "androidx.core:core-ktx:$versions.androidx.core"
     implementation "org.fog-rock.frextensions:frextensions:$versions.fogRock.frextensions"
-    // test
-    testImplementation "junit:junit:$versions.junit"
-    testImplementation "com.google.truth:truth:$versions.google.truth"
-    // androidTest
-    androidTestImplementation "androidx.test.ext:junit:$versions.androidx.testJunit"
-    androidTestImplementation "androidx.test.ext:truth:$versions.androidx.testCore"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidx.testEspresso"
 }
 
 dokkaHtml {
