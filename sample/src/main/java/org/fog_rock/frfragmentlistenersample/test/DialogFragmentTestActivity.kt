@@ -13,12 +13,14 @@ class DialogFragmentTestActivity : FRAppCompatActivity() {
 
     private lateinit var binding: ActivityDialogFragmentTestBinding
 
-    private val callback1Key = registerForDialogResult{
-        binding.textViewResult.text = "Callback1 Result: $it"
+    private val callback1Key = registerForDialogResult {
+        binding.textViewResult.text =
+            getString(R.string.dialog_test_textview_result, getString(R.string.callback_1), it)
     }
 
-    private val callback2Key = registerForDialogResult{
-        binding.textViewResult.text = "Callback2 Result: $it"
+    private val callback2Key = registerForDialogResult {
+        binding.textViewResult.text =
+            getString(R.string.dialog_test_textview_result, getString(R.string.callback_2), it)
     }
 
     private val title: String? get() {

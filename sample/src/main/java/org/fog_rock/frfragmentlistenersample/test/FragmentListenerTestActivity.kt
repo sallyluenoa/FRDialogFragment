@@ -16,10 +16,11 @@ class FragmentListenerTestActivity : FRAppCompatActivity() {
     private val fragmentListenerKey = registerForFragmentListener(
         object : FragmentListenerTestFragment.Listener {
             override fun onClickedButton() {
-                binding.textViewResult.text = "Button clicked."
+                binding.textViewResult.setText(R.string.fragment_test_textview_clicked_button)
             }
             override fun onSelectedSpinnerItem(item: String) {
-                binding.textViewResult.text = "Item selected: $item"
+                binding.textViewResult.text =
+                    getString(R.string.fragment_test_textview_selected_item, item)
             }
         }
     )
