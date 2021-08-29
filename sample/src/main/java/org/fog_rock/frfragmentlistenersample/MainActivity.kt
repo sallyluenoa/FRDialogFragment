@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         binding.buttonSample.setOnClickListener {
             startActivity<SampleActivity>()
         }
-        binding.buttonDialogSample.setOnClickListener {
+        binding.buttonDialogFragmentTest.setOnClickListener {
             startActivity<DialogFragmentTestActivity>()
         }
-        binding.buttonFragmentSample.setOnClickListener {
+        binding.buttonFragmentListenerTest.setOnClickListener {
             startActivity<FragmentListenerTestActivity>()
         }
     }

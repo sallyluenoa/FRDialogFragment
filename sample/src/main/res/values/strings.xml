@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FRFragmentListenerSample</string>
 
@@ -16,6 +17,12 @@
     <string name="result">Result</string>
     <string name="callback_1">Callback 1</string>
     <string name="callback_2">Callback 2</string>
+
+    <string name="button_show_dialog">Show Dialog</string>
+    <string name="button_fragment">Fragment Button</string>
+    <string name="main_button_sample">Show Sample</string>
+    <string name="main_button_dialog_fragment_test">Show Dialog Fragment Test</string>
+    <string name="main_button_fragment_listener_test">Show Fragment Listener Test</string>
 
     <string-array name="cancelable_list">
         <item>@string/cancelable</item>
