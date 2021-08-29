@@ -35,4 +35,17 @@ class FragmentListenerTestActivity : FRAppCompatActivity() {
             R.id.fragment_container
         )
     }
+
+    /**
+     * This method uses tests for `registerForFragmentListener`.
+     * It would be called from androidTest.
+     */
+    fun testOfRegisterForFragmentListener() {
+        val listenerKey = registerForFragmentListener(
+            object : FragmentListenerTestFragment.Listener {
+                override fun onClickedButton() {}
+                override fun onSelectedSpinnerItem(item: String) {}
+            }
+        )
+    }
 }
