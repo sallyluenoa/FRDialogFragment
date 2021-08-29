@@ -39,7 +39,7 @@ class FRDialogFragment : DialogFragment() {
     class Builder(private val context: Context) {
 
         private val args = Bundle()
-        private var cancelable: Boolean = false
+        private var cancelable: Boolean = true
 
         /**
          * Set a key associated with the callback.
@@ -129,6 +129,7 @@ class FRDialogFragment : DialogFragment() {
 
         /**
          * Creates a FRDialogFragment with arguments supplied to this builder.
+         * The default value is true.
          * @return A FRDialogFragment created from this builder
          */
         fun create(): FRDialogFragment = FRDialogFragment().apply {
