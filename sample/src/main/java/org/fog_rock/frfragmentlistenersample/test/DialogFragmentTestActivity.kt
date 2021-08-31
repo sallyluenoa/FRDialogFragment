@@ -87,8 +87,7 @@ class DialogFragmentTestActivity : FRAppCompatActivity() {
             neutral?.let { if (it.isNotEmpty()) setNeutralButton(it) else setNeutralButton(R.string.neutral) }
             cancelable?.let { setCancelable(it) }
             callbackKey?.let { setCallbackKey(it) }
-        }.create()
-            .show(supportFragmentManager, "dialog_fragment")
+        }.show()
     }
 
 }

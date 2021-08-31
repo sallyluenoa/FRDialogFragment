@@ -56,7 +56,6 @@ class SampleActivity : FRAppCompatActivity() {
             setPositiveButton(R.string.ok)
             setNegativeButton(R.string.cancel)
             setCallbackKey(dialogCallbackKey)
-        }.create()
-            .show(supportFragmentManager, null)
+        }.show()
     }
 }

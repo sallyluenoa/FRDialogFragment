@@ -67,7 +67,8 @@ class DialogFragmentWithTwoButtonsTest {
     fun twoButtons_checkViews() {
         // Check dialog fragment.
         activityScenarioRule.scenario.onActivity {
-            val dialogFragment = it.supportFragmentManager.findFragmentByTag("dialog_fragment") as? DialogFragment
+            val dialogFragment = it.supportFragmentManager.findFragmentByTag(
+                FRDialogFragment.TAG_NAME) as? DialogFragment
             Truth.assertThat(dialogFragment).isInstanceOf(FRDialogFragment::class.java)
             Truth.assertThat(dialogFragment?.showsDialog).isTrue()
             Truth.assertThat(dialogFragment?.isCancelable).isTrue()
@@ -96,7 +97,8 @@ class DialogFragmentWithTwoButtonsTest {
             .perform(ViewActions.click())
         // Check dialog fragment.
         activityScenarioRule.scenario.onActivity {
-            val dialogFragment = it.supportFragmentManager.findFragmentByTag("dialog_fragment") as? DialogFragment
+            val dialogFragment = it.supportFragmentManager.findFragmentByTag(
+                FRDialogFragment.TAG_NAME) as? DialogFragment
             Truth.assertThat(dialogFragment).isNull()
         }
         // Check views.
@@ -114,7 +116,8 @@ class DialogFragmentWithTwoButtonsTest {
             .perform(ViewActions.click())
         // Check dialog fragment.
         activityScenarioRule.scenario.onActivity {
-            val dialogFragment = it.supportFragmentManager.findFragmentByTag("dialog_fragment") as? DialogFragment
+            val dialogFragment = it.supportFragmentManager.findFragmentByTag(
+                FRDialogFragment.TAG_NAME) as? DialogFragment
             Truth.assertThat(dialogFragment).isNull()
         }
         // Check views.
@@ -131,7 +134,8 @@ class DialogFragmentWithTwoButtonsTest {
         Espresso.pressBack()
         // Check dialog fragment.
         activityScenarioRule.scenario.onActivity {
-            val dialogFragment = it.supportFragmentManager.findFragmentByTag("dialog_fragment") as? DialogFragment
+            val dialogFragment = it.supportFragmentManager.findFragmentByTag(
+                FRDialogFragment.TAG_NAME) as? DialogFragment
             Truth.assertThat(dialogFragment).isNull()
         }
         // Check views.
