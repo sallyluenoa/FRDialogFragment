@@ -9,13 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FRFragmentListenerSample">
-        <activity android:name="org.fog_rock.frfragmentlistenersample.MainActivity">
+        <activity
+            android:name="org.fog_rock.frfragmentlistenersample.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="org.fog_rock.frfragmentlistenersample.sample.SampleActivity"
+            android:exported="false" />
+        <activity
+            android:name="org.fog_rock.frfragmentlistenersample.test.DialogFragmentTestActivity"
+            android:exported="false" />
+        <activity
+            android:name="org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
