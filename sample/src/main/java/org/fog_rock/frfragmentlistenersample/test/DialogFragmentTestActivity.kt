@@ -88,7 +88,7 @@ class DialogFragmentTestActivity : FRAppCompatActivity() {
             cancelable?.let { setCancelable(it) }
             callbackKey?.let { setCallbackKey(it) }
         }.create()
-            .show(supportFragmentManager, null)
+            .show(supportFragmentManager, "dialog_fragment")
     }
 
 }
