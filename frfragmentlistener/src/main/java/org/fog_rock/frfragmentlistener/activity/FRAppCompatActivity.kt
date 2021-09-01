@@ -18,6 +18,7 @@ open class FRAppCompatActivity: AppCompatActivity() {
      * @param callback A dialog callback
      * @return A key associated with the callback
      * @throws IllegalStateException If it is called after Activity#onCreate().
+     * @sample org.fog_rock.frfragmentlistenersample.sample.SampleActivity.dialogCallbackKey
      */
     fun registerForDialogResult(callback: FRDialogFragment.Callback): String =
         registerForFragmentListener(callback)
@@ -29,6 +30,8 @@ open class FRAppCompatActivity: AppCompatActivity() {
      * @return A key associated with the listener
      * @throws IllegalStateException If it is called after Activity#onCreate().
      * @see org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
+     * @sample org.fog_rock.frfragmentlistenersample.sample.SampleFragment.Listener
+     * @sample org.fog_rock.frfragmentlistenersample.sample.SampleActivity.fragmentListenerKey
      */
     fun registerForFragmentListener(listener: FRFragmentListener): String {
         if (lifecycle.currentState.isAtLeast(Lifecycle.State.CREATED)) {

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -43,6 +44,9 @@ android {
     buildFeatures {
         viewBinding true
     }
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
@@ -54,9 +58,6 @@ dependencies {
     implementation "androidx.core:core-ktx:$versions.androidx.core"
     implementation "com.google.android.material:material:$versions.google.androidMaterial"
     implementation "org.fog-rock.frextensions:frextensions:$versions.fogRock.frextensions"
-    // test
-    testImplementation "junit:junit:$versions.junit"
-    testImplementation "com.google.truth:truth:$versions.google.truth"
     // androidTest
     androidTestImplementation "androidx.test:core-ktx:$versions.androidx.testCore"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidx.testJunit"
