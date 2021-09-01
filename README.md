@@ -18,6 +18,91 @@ In our library, the fragment listeners are registered with the activity in advan
 This allows the listeners without definitions of the override methods of them in the parent activity.  
 In addition, since each listener is registered individually, it allows the listeners to separate for different purposes thus improving readability.
 
+## How to Use
+
+We referred to the Activity Result APIs to implement this library.  
+It is a bit similar to the usage of `registerForActivityResult()`, which has replaced `Activity#onActivityResult()`.
+
+### Notify Fragment Events to Parent Activity
+
+Define a sub-interface of `FRFragmentListener` that notifies the parent activity of fragment events.
+
+```kotlin
+class SampleFragment : Fragment() {
+
+    interface Listener: FRFragmentListener {
+
+        fun onClickedYesButton()
+
+        fun onClickedNoButton()
+    }
+
+    ...
+```
+
+Register the fragment listener and keep the return value as a private field in the subclass of `FRAppCompatActivity`.
+
+```kotlin
+class SampleActivity : FRAppCompatActivity() {
+
+    private val fragmentListenerKey = registerForFragmentListener(object : SampleFragment.Listener {
+        override fun onClickedYesButton() {
+            // Write your result code here!
+        }
+        override fun onClickedNoButton() {
+            // Write your result code here!
+        }
+    })
+
+    ...
+```
+
+Register the listener key to arguments when generate a new instance of the fragment.  
+The key of the pair would be `FRFragmentListener.ARGS_LISTENER_KEY` and its value would be the listener key.  
+Finally, restore the listener in the fragment.
+
+```kotlin
+class SampleFragment : Fragment() {
+
+    companion object {
+        fun newInstance(fragmentListenerKey: String): SampleFragment =
+            SampleFragment().apply {
+                arguments = bundleOf(
+                    FRFragmentListener.ARGS_LISTENER_KEY to fragmentListenerKey
+                )
+            }
+    }
+
+    private val listener: Listener? by lazy { restoreFragmentEventListener() }
+
+    ...
+```
+
+### Show Dialog Fragment
+
+Register a dialog callback and keep the return value as a private field in the subclass of `FRAppCompatActivity`.  
+Then you can easily create and show the dialog fragment.
+
+```kotlin
+class SampleActivity : FRAppCompatActivity() {
+
+    private val dialogCallbackKey = registerForDialogResult {
+        // Write your result code here!
+    }
+
+    private fun showDialog() {
+        FRDialogFragment.Builder(this).apply {
+            setTitle(R.string.title)
+            setMessage(R.string.message)
+            setPositiveButton(R.string.ok)
+            setNegativeButton(R.string.cancel)
+            setCallbackKey(dialogCallbackKey)
+        }.show()
+    }
+
+    ...
+```
+
 ## How to Install
 
 ### Create a Personal Access Token
