@@ -107,10 +107,12 @@ class DialogFragmentWithTwoButtonsTest {
     }
 
     /**
-     * Select the negative button.
+     * Select the negative button after recreated activity.
      */
     @Test
-    fun twoButtons_selectNegative() {
+    fun twoButtons_selectNegative_recreate() {
+        // Recreate activity.
+        activityScenarioRule.scenario.recreate()
         // Perform view actions.
         Espresso.onView(ViewMatchers.withId(android.R.id.button2))
             .perform(ViewActions.click())
