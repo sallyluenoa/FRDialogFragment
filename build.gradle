@@ -38,7 +38,7 @@ buildscript {
                 junit: '4.13.2',
                 // @see https://github.com/sallyluenoa?tab=packages
                 fogRock: [
-                        frextensions: '1.0.0',
+                        frextensions: '1.0.1',
                 ],
         ]
     }
