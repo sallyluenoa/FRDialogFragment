@@ -2,7 +2,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>registerForFragmentListener</title>
-<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script>  </head>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script><script src="https://unpkg.com/kotlin-playground@1" data-selector="code.runnablesample"></script><script src="https://unpkg.com/kotlin-playground@1" data-selector="code.runnablesample"></script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script>  </head>
   <body>
     <div id="container">
       <div id="leftColumn"><a href="../../../index.html">
@@ -28,7 +28,49 @@
   <div>
     <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="register-for-fragment-listener.html">registerForFragmentListener</a>(listener: <a href="../../org.fog_rock.frfragmentlistener.fragment/-f-r-fragment-listener/index.html">FRFragmentListener</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
   </div>
-<p class="paragraph">Register a fragment listener in the holder to receive events from the fragment. The registered listener would be restored in the fragment.</p><h4 class="">Return</h4><p class="paragraph">A key associated with the listener</p><h2 class="">See also</h2><div data-togglable="See also"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes RowTitle"><div class=""><span class="inline-flex"><a href="../../org.fog_rock.frfragmentlistener.fragment/restore-fragment-event-listener.html">org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener</a></span><span class="inline-flex"><div data-togglable="See also"></div></span></div><div></div></div></div></div></div></div></div></div><h2 class="">Parameters</h2><div data-togglable="Parameters"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">listener</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">A fragment listener</p></div></div></div></div></div></div></div></div></div></div><h4 class="">Throws</h4><div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="table"><div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">kotlin.IllegalStateException</a></span></div><div><div class="title"><p class="paragraph">If it is called after Activity#onCreate().</p></div></div></div></div></div></div></div></div>
+<p class="paragraph">Register a fragment listener in the holder to receive events from the fragment. The registered listener would be restored in the fragment.</p><h4 class="">Return</h4><p class="paragraph">A key associated with the listener</p><h2 class="">Samples</h2><div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Samples"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="sample-container"><code class="runnablesample monospace" theme="idea"><pre>import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
+import org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
+import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
+import org.fog_rock.frfragmentlistenersample.databinding.FragmentSampleBinding
+fun main() { 
+   //sampleStart 
+   /**
+     * A sub-interface of FRFragmentListener that notifies the parent activity of fragment events.
+     */
+    interface Listener: FRFragmentListener {
+
+        fun onClickedYesButton()
+
+        fun onClickedNoButton()
+    } 
+   //sampleEnd
+}</pre></code></div><div class="sample-container"><code class="runnablesample monospace" theme="idea"><pre>import android.os.Bundle
+import org.fog_rock.frextensions.androidx.fragment.replaceFragment
+import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
+import org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
+import org.fog_rock.frfragmentlistenersample.R
+import org.fog_rock.frfragmentlistenersample.databinding.ActivitySampleBinding
+fun main() { 
+   //sampleStart 
+   /**
+     * Register a fragment listener and keep a return value
+     * as a private field in the subclass of `FRAppCompatActivity`.
+     */
+    private val fragmentListenerKey = registerForFragmentListener(object : SampleFragment.Listener {
+        override fun onClickedYesButton() {
+            // Write your result code here!
+        }
+        override fun onClickedNoButton() {
+            // Write your result code here!
+        }
+    }) 
+   //sampleEnd
+}</pre></code></div></div></div><h2 class="">See also</h2><div data-togglable="See also"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes RowTitle"><div class=""><span class="inline-flex"><a href="../../org.fog_rock.frfragmentlistener.fragment/restore-fragment-event-listener.html">org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener</a></span><span class="inline-flex"><div data-togglable="See also"></div></span></div><div></div></div></div></div></div></div></div></div><h2 class="">Parameters</h2><div data-togglable="Parameters"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">listener</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">A fragment listener</p></div></div></div></div></div></div></div></div></div></div><h4 class="">Throws</h4><div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="table"><div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">kotlin.IllegalStateException</a></span></div><div><div class="title"><p class="paragraph">If it is called after Activity#onCreate().</p></div></div></div></div></div></div></div></div>
         </div>
         <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
       </div>

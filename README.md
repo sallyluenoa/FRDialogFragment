@@ -37,7 +37,7 @@ class SampleFragment : Fragment() {
         fun onClickedNoButton()
     }
 
-    ...
+    1.0.0.
 ```
 
 Register the fragment listener and keep the return value as a private field in the subclass of `FRAppCompatActivity`.
@@ -54,7 +54,7 @@ class SampleActivity : FRAppCompatActivity() {
         }
     })
 
-    ...
+    1.0.0.
 ```
 
 Register the listener key to arguments when generate a new instance of the fragment.  
@@ -75,7 +75,7 @@ class SampleFragment : Fragment() {
 
     private val listener: Listener? by lazy { restoreFragmentEventListener() }
 
-    ...
+    1.0.0.
 ```
 
 ### Show Dialog Fragment
@@ -100,7 +100,7 @@ class SampleActivity : FRAppCompatActivity() {
         }.show()
     }
 
-    ...
+    1.0.0.
 ```
 
 ## How to Install
