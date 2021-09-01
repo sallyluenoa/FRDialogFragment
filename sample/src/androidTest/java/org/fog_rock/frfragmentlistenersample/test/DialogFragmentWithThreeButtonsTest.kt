@@ -129,10 +129,12 @@ class DialogFragmentWithThreeButtonsTest {
     }
 
     /**
-     * Select the positive button.
+     * Select the positive button after recreated activity.
      */
     @Test
-    fun threeButtons_selectPositive() {
+    fun threeButtons_selectPositive_recreate() {
+        // Recreate activity.
+        activityScenarioRule.scenario.recreate()
         // Perform view actions.
         Espresso.onView(ViewMatchers.withId(android.R.id.button1))
             .perform(ViewActions.click())
@@ -167,10 +169,12 @@ class DialogFragmentWithThreeButtonsTest {
     }
 
     /**
-     * Select the neutral button.
+     * Select the neutral button after recreated activity.
      */
     @Test
-    fun threeButtons_selectNeutral() {
+    fun threeButtons_selectNeutral_recreate() {
+        // Recreate activity.
+        activityScenarioRule.scenario.recreate()
         // Perform view actions.
         Espresso.onView(ViewMatchers.withId(android.R.id.button3))
             .perform(ViewActions.click())
