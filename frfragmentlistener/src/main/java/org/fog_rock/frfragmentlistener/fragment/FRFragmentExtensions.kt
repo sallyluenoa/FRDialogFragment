@@ -6,7 +6,10 @@ import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
 
 /**
  * Restore a fragment listener from the arguments and the activity holder.
+ * The method is assumed to be called from Kotlin code.
+ * For Java code, use `FRFragmentSupporter` class instead.
  * @return A fragment listener with the specified type
+ * @see org.fog_rock.frfragmentlistener.fragment.FRFragmentSupporter.restoreFragmentEventListener
  * @sample org.fog_rock.frfragmentlistenersample.sample.SampleFragment.listener
  */
 inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener(): T? {
