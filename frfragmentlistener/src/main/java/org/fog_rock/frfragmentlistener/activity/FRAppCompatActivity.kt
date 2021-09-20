@@ -11,7 +11,8 @@ import org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
  */
 open class FRAppCompatActivity: AppCompatActivity() {
 
-    internal val fragmentListenerHolder: MutableMap<String, FRFragmentListener> = mutableMapOf()
+    private val _fragmentListenerHolder: MutableMap<String, FRFragmentListener> = mutableMapOf()
+    val fragmentListenerHolder get() = _fragmentListenerHolder.toMap()
 
     /**
      * Register a dialog callback in the holder to receive the result from the dialog.
@@ -38,8 +39,8 @@ open class FRAppCompatActivity: AppCompatActivity() {
             throw IllegalStateException(
                 "Cannot register fragment listener. It must be called before CREATED stage.")
         }
-        val key = "fragment_listener#${fragmentListenerHolder.size}"
-        fragmentListenerHolder[key] = listener
+        val key = "fragment_listener#${_fragmentListenerHolder.size}"
+        _fragmentListenerHolder[key] = listener
         logI("Registered fragment listener. key: $key")
         return key
     }
