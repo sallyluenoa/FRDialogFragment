@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import org.fog_rock.frextensions.androidx.log.logW
 import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
 
-class FRFragmentSupporter<T : FRFragmentListener?> {
+class FRFragmentSupporter<T : FRFragmentListener>(private val tClass: Class<T>) {
 
     fun restoreFragmentEventListener(fragment: Fragment): T? {
         val callbackKey = fragment.arguments?.getString(FRFragmentListener.ARGS_LISTENER_KEY) ?: run {
@@ -19,10 +19,11 @@ class FRFragmentSupporter<T : FRFragmentListener?> {
             logW("Not found fragment listener from holders.")
             return null
         }
-        @Suppress("UNCHECKED_CAST")
-        return listener as? T ?: run {
+        if (!tClass.isAssignableFrom(listener.javaClass)) {
             logW("Invalid subclass of FragmentEventListener.")
             return null
         }
+        @Suppress("UNCHECKED_CAST")
+        return listener as T
     }
 }
