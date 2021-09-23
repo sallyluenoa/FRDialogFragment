@@ -8,7 +8,7 @@ import org.fog_rock.frfragmentlistenersample.R
 import org.fog_rock.frfragmentlistenersample.databinding.ActivitySampleBinding
 
 /**
- * This is a sample code for API documents.
+ * This is a Kotlin sample code for API documents.
  */
 class SampleActivity : FRAppCompatActivity() {
 

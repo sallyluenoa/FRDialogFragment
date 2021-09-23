@@ -11,7 +11,7 @@ import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
 import org.fog_rock.frfragmentlistenersample.databinding.FragmentSampleBinding
 
 /**
- * This is a sample code for API documents.
+ * This is a Kotlin sample code for API documents.
  */
 class SampleFragment : Fragment() {
 
