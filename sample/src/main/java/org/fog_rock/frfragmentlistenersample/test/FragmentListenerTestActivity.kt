@@ -7,7 +7,7 @@ import org.fog_rock.frfragmentlistenersample.R
 import org.fog_rock.frfragmentlistenersample.databinding.ActivityFragmentListenerTestBinding
 
 /**
- * This is a sample code for android test.
+ * This is a Kotlin sample code for android test.
  */
 class FragmentListenerTestActivity : FRAppCompatActivity() {
 

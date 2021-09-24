@@ -28,7 +28,13 @@
             android:name="org.fog_rock.frfragmentlistenersample.test.DialogFragmentTestActivity"
             android:exported="false" />
         <activity
+            android:name="org.fog_rock.frfragmentlistenersample.test.DialogFragmentTestJavaActivity"
+            android:exported="false" />
+        <activity
             android:name="org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity"
+            android:exported="false" />
+        <activity
+            android:name="org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestJavaActivity"
             android:exported="false" />
     </application>
 
