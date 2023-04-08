@@ -1,29 +1,29 @@
 ---
-name: バグレポート
-about: 障害報告
-title: ''
+name: Bug Report
+about: Report something isn't working because of bugs.
+title: '[Bug report]'
 labels: bug
-assignees: ''
+assignees: 'sallyluenoa'
 
 ---
 
-## 概要
+## Overviews
 * 
 
-### 再現手順
+### How to Cause Bugs
 * 
 
-### 正しい動作
+### Expected Behaviors
 * 
 
-### 実際の動作
+### Actual Behaviors
 * 
 
-### バージョン or コミットハッシュ
+### Version or Commit Hash
 * 
 
-### コメント
+### Comments
 * 
 
-### 参考資料 or 関連issues
+### References or Related Issues
 * 
