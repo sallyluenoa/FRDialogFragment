@@ -1,3 +1,19 @@
+/*
+ * Copyright (c) 2021 SallyLueNoa
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.fog_rock.frfragmentlistenersample.test
 
 import androidx.lifecycle.Lifecycle
@@ -15,7 +31,7 @@ import org.junit.runner.RunWith
 
 /**
  * Test codes for `FRFragmentListener` with `FragmentListenerTestActivity`.
- * @see FragmentListenerTestActivity
+ * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity
  * @see org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
  * @see org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity.registerForFragmentListener
  */
@@ -37,7 +53,7 @@ class FragmentListenerTest {
 
     /**
      * A test for clicked button.
-     * @see FragmentListenerTestFragment.Listener.onClickedButton
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestFragment.Listener.onClickedButton
      */
     @Test
     fun clickedButton() {
@@ -51,7 +67,7 @@ class FragmentListenerTest {
 
     /**
      * A test for selected spinner "Positive".
-     * @see FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
      */
     @Test
     fun selectedSpinnerPositive() {
@@ -71,7 +87,7 @@ class FragmentListenerTest {
 
     /**
      * A test for selected spinner "Negative".
-     * @see FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
      */
     @Test
     fun selectedSpinnerNegative() {
@@ -91,7 +107,7 @@ class FragmentListenerTest {
 
     /**
      * A test for selected spinner "Neutral".
-     * @see FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
      */
     @Test
     fun selectedSpinnerNeutral() {
@@ -144,7 +160,7 @@ class FragmentListenerTest {
 
     /**
      * A failed test due to call method `registerForFragmentListener()` with created state.
-     * @see FragmentListenerTestActivity.testOfRegisterForFragmentListener
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity.testOfRegisterForFragmentListener
      */
     @Test
     fun registerForFragmentListener_created() {
@@ -163,7 +179,7 @@ class FragmentListenerTest {
 
     /**
      * A failed test due to call method `registerForFragmentListener()` with resumed state.
-     * @see FragmentListenerTestActivity.testOfRegisterForFragmentListener
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity.testOfRegisterForFragmentListener
      */
     @Test
     fun registerForFragmentListener_resumed() {
