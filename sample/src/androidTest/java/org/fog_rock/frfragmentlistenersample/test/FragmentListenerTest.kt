@@ -31,7 +31,7 @@ import org.junit.runner.RunWith
 
 /**
  * Test codes for `FRFragmentListener` with `FragmentListenerTestActivity`.
- * @see FragmentListenerTestActivity
+ * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity
  * @see org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
  * @see org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity.registerForFragmentListener
  */
@@ -53,7 +53,7 @@ class FragmentListenerTest {
 
     /**
      * A test for clicked button.
-     * @see FragmentListenerTestFragment.Listener.onClickedButton
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestFragment.Listener.onClickedButton
      */
     @Test
     fun clickedButton() {
@@ -67,7 +67,7 @@ class FragmentListenerTest {
 
     /**
      * A test for selected spinner "Positive".
-     * @see FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
      */
     @Test
     fun selectedSpinnerPositive() {
@@ -87,7 +87,7 @@ class FragmentListenerTest {
 
     /**
      * A test for selected spinner "Negative".
-     * @see FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
      */
     @Test
     fun selectedSpinnerNegative() {
@@ -107,7 +107,7 @@ class FragmentListenerTest {
 
     /**
      * A test for selected spinner "Neutral".
-     * @see FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestFragment.Listener.onSelectedSpinnerItem
      */
     @Test
     fun selectedSpinnerNeutral() {
@@ -160,7 +160,7 @@ class FragmentListenerTest {
 
     /**
      * A failed test due to call method `registerForFragmentListener()` with created state.
-     * @see FragmentListenerTestActivity.testOfRegisterForFragmentListener
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity.testOfRegisterForFragmentListener
      */
     @Test
     fun registerForFragmentListener_created() {
@@ -179,7 +179,7 @@ class FragmentListenerTest {
 
     /**
      * A failed test due to call method `registerForFragmentListener()` with resumed state.
-     * @see FragmentListenerTestActivity.testOfRegisterForFragmentListener
+     * @see org.fog_rock.frfragmentlistenersample.test.FragmentListenerTestActivity.testOfRegisterForFragmentListener
      */
     @Test
     fun registerForFragmentListener_resumed() {

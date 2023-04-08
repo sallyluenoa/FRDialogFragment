@@ -38,13 +38,13 @@ import org.junit.runner.RunWith
 /**
  * Test codes for `FRDialogFragment` with `DialogFragmentTestActivity`.
  * It shows three buttons - a positive, a negative, and a neutral button.
- * @see DialogFragmentTestActivity
+ * @see org.fog_rock.frfragmentlistenersample.test.DialogFragmentTestActivity
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
  */
 @RunWith(AndroidJUnit4::class)
 class DialogFragmentWithThreeButtonsTest {
 
-    @get: Rule val activityScenarioRule =
+    @get:Rule val activityScenarioRule =
         ActivityScenarioRule(DialogFragmentTestActivity::class.java)
 
     @Before

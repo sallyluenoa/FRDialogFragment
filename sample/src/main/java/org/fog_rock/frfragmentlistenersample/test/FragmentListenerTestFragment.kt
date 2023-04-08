@@ -27,6 +27,9 @@ import org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
 import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
 import org.fog_rock.frfragmentlistenersample.databinding.FragmentFragmentListenerTestBinding
 
+/**
+ * This is a sample code for android test.
+ */
 class FragmentListenerTestFragment : Fragment() {
 
     interface Listener: FRFragmentListener {

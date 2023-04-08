@@ -37,13 +37,13 @@ import org.junit.runner.RunWith
 /**
  * Test codes for `FRDialogFragment` with `DialogFragmentTestActivity`.
  * It only shows one button - a positive button.
- * @see DialogFragmentTestActivity
+ * @see org.fog_rock.frfragmentlistenersample.test.DialogFragmentTestActivity
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
  */
 @RunWith(AndroidJUnit4::class)
 class DialogFragmentWithOneButtonTest {
 
-    @get: Rule val activityScenarioRule =
+    @get:Rule val activityScenarioRule =
         ActivityScenarioRule(DialogFragmentTestActivity::class.java)
 
     @Before

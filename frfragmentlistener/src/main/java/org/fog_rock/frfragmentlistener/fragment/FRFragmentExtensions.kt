@@ -34,7 +34,7 @@ inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener
 }
 
 /**
- * @suppress It would be called by Fragment#restoreFragmentEventListener.
+ * @suppress It would be called by `Fragment#restoreFragmentEventListener`.
  */
 fun Fragment.restoreFRFragmentEventListener(): FRFragmentListener? {
     val callbackKey = arguments?.getString(FRFragmentListener.ARGS_LISTENER_KEY) ?: run {

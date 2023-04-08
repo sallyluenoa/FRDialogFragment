@@ -32,7 +32,7 @@ import org.fog_rock.frfragmentlistenersample.databinding.FragmentSampleBinding
 class SampleFragment : Fragment() {
 
     /**
-     * A sub-interface of FRFragmentListener that notifies the parent activity of fragment events.
+     * A sub-interface of `FRFragmentListener` that notifies the parent activity of fragment events.
      */
     interface Listener: FRFragmentListener {
 

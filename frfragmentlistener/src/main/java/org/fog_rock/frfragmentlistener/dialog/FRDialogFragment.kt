@@ -27,7 +27,7 @@ import org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
 import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
 
 /**
- * A subclass of DialogFragment to display a alert dialog conveniently.
+ * A subclass of `DialogFragment` to display a alert dialog conveniently.
  * The class can be displayed positive, negative, and neutral buttons.
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Builder
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Callback
@@ -37,7 +37,7 @@ import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
 class FRDialogFragment : DialogFragment() {
 
     /**
-     * A callback interface for FRDialogFragment
+     * A callback interface for `FRDialogFragment`
      * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
      */
     fun interface Callback : FRFragmentListener {
@@ -49,7 +49,7 @@ class FRDialogFragment : DialogFragment() {
     }
 
     /**
-     * A builder class for FRDialogFragment
+     * A builder class for `FRDialogFragment`
      * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
      */
     class Builder(private val activity: FragmentActivity) {
@@ -145,7 +145,7 @@ class FRDialogFragment : DialogFragment() {
         fun setCancelable(cancelable: Boolean): Builder = also { it.cancelable = cancelable }
 
         /**
-         * Create a FRDialogFragment with the arguments supplied to this builder and display it on the parent activity.
+         * Create `FRDialogFragment` with the arguments supplied to this builder and display it on the parent activity.
          */
         fun show() {
             FRDialogFragment().apply {
