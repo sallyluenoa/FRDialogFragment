@@ -15,5 +15,5 @@
  */
 
 include ':frfragmentlistener'
-include ':sample'
+include ':frfragmentlistenersample'
 rootProject.name = "FRFragmentListener"
