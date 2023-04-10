@@ -18,9 +18,9 @@ package org.fog_rock.frfragmentlistener.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
-import org.fog_rock.frextensions.androidx.log.logI
 import org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
 import org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
+import org.fog_rock.frlogs.frLogI
 
 /**
  * A subclass of `AppCompatActivity` to keep fragment listeners in the holder.
@@ -56,7 +56,7 @@ open class FRAppCompatActivity: AppCompatActivity() {
         }
         val key = "fragment_listener#${fragmentListenerHolder.size}"
         fragmentListenerHolder[key] = listener
-        logI("Registered fragment listener. key: $key")
+        frLogI("Registered fragment listener. key: $key")
         return key
     }
 }

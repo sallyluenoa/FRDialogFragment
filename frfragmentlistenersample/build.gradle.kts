@@ -79,7 +79,6 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.fogrock.frextensions)
-    implementation(libs.fogrock.frlogs)
     implementation(libs.google.android.material)
     // androidTest
     androidTestImplementation(libs.bundles.androidx.test)
