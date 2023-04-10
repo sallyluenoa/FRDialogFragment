@@ -14,6 +14,13 @@
  * limitations under the License.
  */
 
-include ':frfragmentlistener'
-include ':frfragmentlistenersample'
-rootProject.name = "FRFragmentListener"
+@Suppress("DSL_SCOPE_VIOLATION")
+plugins {
+    alias(libs.plugins.android.app.gradle) apply false
+    alias(libs.plugins.android.lib.gradle) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.dokka) apply false
+}
+
+// Workaround for "Expecting an expression" build error
+println("")
