@@ -17,8 +17,8 @@
 package org.fog_rock.frfragmentlistener.fragment
 
 import androidx.fragment.app.Fragment
-import org.fog_rock.frextensions.androidx.log.logW
 import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
+import org.fog_rock.frlogs.frLogW
 
 /**
  * Restore a fragment listener from the arguments and the activity holder.
@@ -28,7 +28,7 @@ import org.fog_rock.frfragmentlistener.activity.FRAppCompatActivity
 inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener(): T? {
     val listener = restoreFRFragmentEventListener() ?: return null
     return listener as? T ?: run {
-        logW("Invalid subclass of FragmentEventListener.")
+        frLogW("Invalid subclass of FragmentEventListener.")
         return null
     }
 }
@@ -38,15 +38,15 @@ inline fun <reified T: FRFragmentListener> Fragment.restoreFragmentEventListener
  */
 fun Fragment.restoreFRFragmentEventListener(): FRFragmentListener? {
     val callbackKey = arguments?.getString(FRFragmentListener.ARGS_LISTENER_KEY) ?: run {
-        logW("Not found fragment listener key.")
+        frLogW("Not found fragment listener key.")
         return null
     }
     val activity = requireActivity() as? FRAppCompatActivity ?: run {
-        logW("Activity does not extends FRAppCompatActivity.")
+        frLogW("Activity does not extends FRAppCompatActivity.")
         return null
     }
     return activity.fragmentListenerHolder[callbackKey] ?: run {
-        logW("Not found fragment listener from holders.")
+        frLogW("Not found fragment listener from holders.")
         return null
     }
 }
