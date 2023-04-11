@@ -1,225 +1,220 @@
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Builder</title>
-<link href="../../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../../scripts/main.js" async="async"></script>  </head>
-  <body>
-    <div id="container">
-      <div id="leftColumn"><a href="../../../../index.html">
-          <div id="logo"></div>
-        </a>
-        <div id="paneSearch"></div>
+    <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../../index.html">
+                    <span>frfragmentlistener</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":frfragmentlistener:dokkaHtml/release">androidJvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
         <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <div id="leftToggler"><span class="icon-toggler"></span></div>
-<script type="text/javascript" src="../../../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="frfragmentlistener::org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder///PointingToDeclaration//1545995458">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../../../../index.html">frfragmentlistener</a>/<a href="../../index.html">org.fog_rock.frfragmentlistener.dialog</a>/<a href="../index.html">FRDialogFragment</a>/<a href="index.html">Builder</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
-            </div>
-          </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Builder</span></h1>
-            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">class <a href="index.html">Builder</a>(activity: <a href="https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html">FragmentActivity</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A builder class for FRDialogFragment</p></div></div>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="See also">See also</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">See also</h2>
-              <div data-togglable="See also">
-                <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes RowTitle"><div class=""><span class="inline-flex"><a href="../index.html">org.fog_rock.frfragmentlistener.dialog.FRDialogFragment</a></span><span class="inline-flex"><div data-togglable="See also"></div></span></div><div></div></div></div></div></div></div></div>
-              </div>
-              <h2 class="tabbedcontent">Constructors</h2>
-              <div class="table" data-togglable="Constructors"><a data-name="1231397940%2FConstructors%2F1545995458" anchor-label="Builder" id="1231397940%2FConstructors%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue TabbedContent">
-                    <div class=""><span class="inline-flex"><a href="-builder.html">Builder</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1231397940%2FConstructors%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="-builder.html">Builder</a>(activity: <a href="https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html">FragmentActivity</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h2 class="">Functions</h2>
-              <div class="table" data-togglable="Functions"><a data-name="1809536406%2FFunctions%2F1545995458" anchor-label="setCallbackKey" id="1809536406%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="set-callback-key.html">setCallbackKey</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1809536406%2FFunctions%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-callback-key.html">setCallbackKey</a>(key: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="frfragmentlistener::org.fog_rock.frfragmentlistener.dialog/FRDialogFragment.Builder///PointingToDeclaration//1545995458">
+  <div class="breadcrumbs"><a href="../../../../index.html">frfragmentlistener</a><span class="delimiter">/</span><a href="../../index.html">org.fog_rock.frfragmentlistener.dialog</a><span class="delimiter">/</span><a href="../index.html">FRDialogFragment</a><span class="delimiter">/</span><span class="current">Builder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Builder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Builder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html">FragmentActivity</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">A builder class for <code class="lang-kotlin">FRDialogFragment</code></p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../index.html"><span>FRDialog</span><wbr></wbr><span><span>Fragment</span></span></a></div></span></div><div></div></div></div></div></div></div>
   </div>
-<a data-name="1809536406%2FFunctions%2F1545995458" anchor-label="setCallbackKey" id="1809536406%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="1809536406%2FFunctions%2F1545995458" anchor-label="setCallbackKey" id="1809536406%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a key associated with the callback.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="2116680643%2FFunctions%2F1545995458" anchor-label="setCancelable" id="2116680643%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="set-cancelable.html">setCancelable</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2116680643%2FFunctions%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-cancelable.html">setCancelable</a>(cancelable: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="2116680643%2FFunctions%2F1545995458" anchor-label="setCancelable" id="2116680643%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="2116680643%2FFunctions%2F1545995458" anchor-label="setCancelable" id="2116680643%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set whether a dialog is cancelable or not.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-351925578%2FFunctions%2F1545995458" anchor-label="setMessage" id="-351925578%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="set-message.html">setMessage</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-351925578%2FFunctions%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-message.html">setMessage</a>(<span>@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html">StringRes</a>() </span>messageId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="316766335%2FFunctions%2F1545995458" anchor-label="setMessage" id="316766335%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="316766335%2FFunctions%2F1545995458" anchor-label="setMessage" id="316766335%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a message.</div></div>
-<div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-message.html">setMessage</a>(message: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1624368509%2FFunctions%2F1545995458" anchor-label="setMessage" id="-1624368509%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="-1624368509%2FFunctions%2F1545995458" anchor-label="setMessage" id="-1624368509%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a message.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="262860124%2FFunctions%2F1545995458" anchor-label="setNegativeButton" id="262860124%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="set-negative-button.html">setNegativeButton</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262860124%2FFunctions%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-negative-button.html">setNegativeButton</a>(<span>@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html">StringRes</a>() </span>textId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1716510921%2FFunctions%2F1545995458" anchor-label="setNegativeButton" id="1716510921%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="1716510921%2FFunctions%2F1545995458" anchor-label="setNegativeButton" id="1716510921%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a text of a negative button.</div></div>
-<div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-negative-button.html">setNegativeButton</a>(text: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1670883847%2FFunctions%2F1545995458" anchor-label="setNegativeButton" id="-1670883847%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="-1670883847%2FFunctions%2F1545995458" anchor-label="setNegativeButton" id="-1670883847%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a text of a negative button.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1985241014%2FFunctions%2F1545995458" anchor-label="setNeutralButton" id="1985241014%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="set-neutral-button.html">setNeutralButton</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1985241014%2FFunctions%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-neutral-button.html">setNeutralButton</a>(<span>@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html">StringRes</a>() </span>textId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-228863187%2FFunctions%2F1545995458" anchor-label="setNeutralButton" id="-228863187%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="-228863187%2FFunctions%2F1545995458" anchor-label="setNeutralButton" id="-228863187%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a text of a neutral button.</div></div>
-<div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-neutral-button.html">setNeutralButton</a>(text: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-22243051%2FFunctions%2F1545995458" anchor-label="setNeutralButton" id="-22243051%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="-22243051%2FFunctions%2F1545995458" anchor-label="setNeutralButton" id="-22243051%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a text of a neutral button.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-638139932%2FFunctions%2F1545995458" anchor-label="setPositiveButton" id="-638139932%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="set-positive-button.html">setPositiveButton</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-638139932%2FFunctions%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-positive-button.html">setPositiveButton</a>(<span>@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html">StringRes</a>() </span>textId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-188506235%2FFunctions%2F1545995458" anchor-label="setPositiveButton" id="-188506235%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="-188506235%2FFunctions%2F1545995458" anchor-label="setPositiveButton" id="-188506235%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a text of a positive button.</div></div>
-<div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-positive-button.html">setPositiveButton</a>(text: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-339128899%2FFunctions%2F1545995458" anchor-label="setPositiveButton" id="-339128899%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="-339128899%2FFunctions%2F1545995458" anchor-label="setPositiveButton" id="-339128899%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a text of a positive button.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1202316054%2FFunctions%2F1545995458" anchor-label="setTitle" id="1202316054%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="set-title.html">setTitle</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1202316054%2FFunctions%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-title.html">setTitle</a>(<span>@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html">StringRes</a>() </span>titleId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1823759538%2FFunctions%2F1545995458" anchor-label="setTitle" id="-1823759538%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="-1823759538%2FFunctions%2F1545995458" anchor-label="setTitle" id="-1823759538%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a title text.</div></div>
-<div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="set-title.html">setTitle</a>(title: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="index.html">FRDialogFragment.Builder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1643759956%2FFunctions%2F1545995458" anchor-label="setTitle" id="1643759956%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="1643759956%2FFunctions%2F1545995458" anchor-label="setTitle" id="1643759956%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Set a title text.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-921011159%2FFunctions%2F1545995458" anchor-label="show" id="-921011159%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
-                <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="show.html">show</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-921011159%2FFunctions%2F1545995458"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace">fun <a href="show.html">show</a>()<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-921011159%2FFunctions%2F1545995458" anchor-label="show" id="-921011159%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a><div class="brief "><a data-name="-921011159%2FFunctions%2F1545995458" anchor-label="show" id="-921011159%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>Create a FRDialogFragment with the arguments supplied to this builder and display it on the parent activity.</div></div>
-</div>
-                    </div>
-                  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1231397940%2FConstructors%2F1545995458" anchor-label="Builder" id="1231397940%2FConstructors%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-builder.html"><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1231397940%2FConstructors%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html">FragmentActivity</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1809536406%2FFunctions%2F1545995458" anchor-label="setCallbackKey" id="1809536406%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-callback-key.html"><span>set</span><wbr></wbr><span>Callback</span><wbr></wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1809536406%2FFunctions%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-callback-key.html"><span class="token function">setCallbackKey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="brief "><p class="paragraph">Set a key associated with the callback.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2116680643%2FFunctions%2F1545995458" anchor-label="setCancelable" id="2116680643%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-cancelable.html"><span>set</span><wbr></wbr><span><span>Cancelable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2116680643%2FFunctions%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-cancelable.html"><span class="token function">setCancelable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cancelable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="brief "><p class="paragraph">Set whether a dialog is cancelable or not. The default value is true.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-351925578%2FFunctions%2F1545995458" anchor-label="setMessage" id="-351925578%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-message.html"><span>set</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-351925578%2FFunctions%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-message.html"><span class="token function">setMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html"><span class="token annotation builtin">StringRes</span></a> </span>messageId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-message.html"><span class="token function">setMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="brief "><p class="paragraph">Set a message.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="262860124%2FFunctions%2F1545995458" anchor-label="setNegativeButton" id="262860124%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-negative-button.html"><span>set</span><wbr></wbr><span>Negative</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262860124%2FFunctions%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-negative-button.html"><span class="token function">setNegativeButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html"><span class="token annotation builtin">StringRes</span></a> </span>textId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-negative-button.html"><span class="token function">setNegativeButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="brief "><p class="paragraph">Set a text of a negative button.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1985241014%2FFunctions%2F1545995458" anchor-label="setNeutralButton" id="1985241014%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-neutral-button.html"><span>set</span><wbr></wbr><span>Neutral</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1985241014%2FFunctions%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-neutral-button.html"><span class="token function">setNeutralButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html"><span class="token annotation builtin">StringRes</span></a> </span>textId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-neutral-button.html"><span class="token function">setNeutralButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="brief "><p class="paragraph">Set a text of a neutral button.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-638139932%2FFunctions%2F1545995458" anchor-label="setPositiveButton" id="-638139932%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-positive-button.html"><span>set</span><wbr></wbr><span>Positive</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-638139932%2FFunctions%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-positive-button.html"><span class="token function">setPositiveButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html"><span class="token annotation builtin">StringRes</span></a> </span>textId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-positive-button.html"><span class="token function">setPositiveButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="brief "><p class="paragraph">Set a text of a positive button.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1202316054%2FFunctions%2F1545995458" anchor-label="setTitle" id="1202316054%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-title.html"><span>set</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1202316054%2FFunctions%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-title.html"><span class="token function">setTitle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/StringRes.html"><span class="token annotation builtin">StringRes</span></a> </span>titleId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-title.html"><span class="token function">setTitle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FRDialogFragment.Builder</a></div><div class="brief "><p class="paragraph">Set a title text.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-921011159%2FFunctions%2F1545995458" anchor-label="show" id="-921011159%2FFunctions%2F1545995458" data-filterable-set=":frfragmentlistener:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":frfragmentlistener:dokkaHtml/release" data-filterable-set=":frfragmentlistener:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="show.html"><span><span>show</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-921011159%2FFunctions%2F1545995458"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":frfragmentlistener:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="show.html"><span class="token function">show</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Create <code class="lang-kotlin">FRDialogFragment</code> with the arguments supplied to this builder and display it on the parent activity.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
 </html>
-
