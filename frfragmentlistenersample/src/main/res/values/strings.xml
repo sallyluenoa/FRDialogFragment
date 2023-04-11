@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021 SallyLueNoa
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">FRFragmentListenerSample</string>
+
+    <string name="empty"/>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="positive">Positive</string>
+    <string name="negative">Negative</string>
+    <string name="neutral">Neutral</string>
+    <string name="cancelable">Cancelable</string>
+    <string name="non_cancelable">Non-cancelable</string>
+    <string name="result">Result</string>
+    <string name="callback_1">Callback 1</string>
+    <string name="callback_2">Callback 2</string>
+
+    <string name="button_show_dialog">Show Dialog</string>
+    <string name="button_fragment">Fragment Button</string>
+    <string name="main_button_sample">Show Sample</string>
+    <string name="main_button_dialog_fragment_test">Show Dialog Fragment Test</string>
+    <string name="main_button_fragment_listener_test">Show Fragment Listener Test</string>
+    <string name="fragment_test_textview_clicked_button">Button clicked.</string>
+    <string name="fragment_test_textview_selected_item">Item selected: %1$s</string>
+    <string name="dialog_test_textview_result">Result: %1$s, which=%2$d</string>
+
+    <string-array name="cancelable_list">
+        <item>@string/cancelable</item>
+        <item>@string/non_cancelable</item>
+    </string-array>
+
+    <string-array name="callback_list">
+        <item>@string/callback_1</item>
+        <item>@string/callback_2</item>
+    </string-array>
+
+    <string-array name="fragment_test_list">
+        <item>@string/positive</item>
+        <item>@string/negative</item>
+        <item>@string/neutral</item>
+    </string-array>
+
+</resources>

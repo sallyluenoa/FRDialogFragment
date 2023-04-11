@@ -1,3 +1,0 @@
-include ':frfragmentlistener'
-include ':sample'
-rootProject.name = "FRFragmentListener"

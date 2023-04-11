@@ -15,4 +15,11 @@
   ~ limitations under the License.
   -->
 
-<manifest/>
+<resources>
+
+    <dimen name="common_layout_margin">10dp</dimen>
+
+    <dimen name="textview_text_size">24sp</dimen>
+    <dimen name="textview_layout_margin">20dp</dimen>
+
+</resources>

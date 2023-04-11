@@ -1,3 +1,19 @@
+/*
+ * Copyright (c) 2021 SallyLueNoa
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.fog_rock.frfragmentlistener.dialog
 
 import android.app.Dialog
@@ -11,7 +27,7 @@ import org.fog_rock.frfragmentlistener.fragment.FRFragmentListener
 import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
 
 /**
- * A subclass of DialogFragment to display a alert dialog conveniently.
+ * A subclass of `DialogFragment` to display a alert dialog conveniently.
  * The class can be displayed positive, negative, and neutral buttons.
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Builder
  * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment.Callback
@@ -21,7 +37,7 @@ import org.fog_rock.frfragmentlistener.fragment.restoreFragmentEventListener
 class FRDialogFragment : DialogFragment() {
 
     /**
-     * A callback interface for FRDialogFragment
+     * A callback interface for `FRDialogFragment`
      * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
      */
     fun interface Callback : FRFragmentListener {
@@ -33,7 +49,7 @@ class FRDialogFragment : DialogFragment() {
     }
 
     /**
-     * A builder class for FRDialogFragment
+     * A builder class for `FRDialogFragment`
      * @see org.fog_rock.frfragmentlistener.dialog.FRDialogFragment
      */
     class Builder(private val activity: FragmentActivity) {
@@ -129,7 +145,7 @@ class FRDialogFragment : DialogFragment() {
         fun setCancelable(cancelable: Boolean): Builder = also { it.cancelable = cancelable }
 
         /**
-         * Create a FRDialogFragment with the arguments supplied to this builder and display it on the parent activity.
+         * Create `FRDialogFragment` with the arguments supplied to this builder and display it on the parent activity.
          */
         fun show() {
             FRDialogFragment().apply {
